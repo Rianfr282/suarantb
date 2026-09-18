@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 219 42" width="219" height="42">
+  <defs>
+    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0089C3" />
+      <stop offset="100%" stop-color="#005b82" />
+    </linearGradient>
+  </defs>
+  <!-- Icon Symbol -->
+  <g transform="translate(2, 4)">
+    <rect width="34" height="34" rx="8" fill="url(#logoGrad)" />
+    <!-- Wave / Sound bars -->
+    <path d="M11 22 V12 M17 26 V8 M23 22 V12" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
+  </g>
+  <!-- Text Brand -->
+  <text x="44" y="24" font-family="'Inter', sans-serif" font-weight="800" font-size="20" fill="var(--color-text, #000000)" letter-spacing="-0.5">SUARA<tspan fill="#0089C3">NTB</tspan></text>
+  <text x="44" y="35" font-family="'Inter', sans-serif" font-weight="500" font-size="8.5" fill="var(--color-header-meta, #7F7979)" letter-spacing="1.5">PORTAL BERITA NTB</text>
+</svg>
