@@ -1317,7 +1317,7 @@ button {
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-card);
-  padding: 16px;
+  padding: 18px;
   margin-bottom: 20px;
 }
 
@@ -1330,21 +1330,27 @@ button {
 .archive-desc {
   font-size: 12px;
   color: var(--color-header-meta);
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
-.filter-form-row {
+/* Container Filter: Kolom Select Vertikal di Kiri, Tombol Tampilkan di Kanan */
+.filter-flex-container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  align-items: center;
-  position: relative;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.filter-selects-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  max-width: 320px;
 }
 
 .custom-select-wrapper {
   position: relative;
-  flex: 1;
-  min-width: 80px;
+  width: 100%;
 }
 
 .custom-select-trigger {
@@ -1352,7 +1358,7 @@ button {
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-button);
-  padding: 8px 10px;
+  padding: 9px 12px;
   font-size: 12px;
   font-weight: 500;
   color: var(--color-text);
@@ -1373,7 +1379,7 @@ button {
   color: #FFFFFF;
   border-radius: var(--radius-button);
   box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-  z-index: 300; /* Dropdown tidak boleh tertutup frame iklan */
+  z-index: 50; /* Tidak menimpa header (header z-index: 100) */
   display: none;
   flex-direction: column;
 }
@@ -1397,19 +1403,27 @@ button {
 .btn-filter-submit {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
   background-color: #000000;
   color: #FFFFFF;
-  font-size: 12px;
-  font-weight: 600;
-  padding: 9px 14px;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 0 20px;
   border-radius: var(--radius-button);
   flex-shrink: 0;
+  height: auto;
+  min-height: 42px;
+  transition: opacity 0.15s, transform 0.1s;
 }
 
 [data-theme="dark"] .btn-filter-submit {
   background-color: var(--color-primary);
   color: #FFFFFF;
+}
+
+.btn-filter-submit:hover {
+  opacity: 0.9;
 }
 
 .btn-filter-submit svg {
@@ -1419,23 +1433,24 @@ button {
 }
 
 .filter-result-area {
-  margin-top: 16px;
+  margin-top: 20px;
 }
 
 .filter-result-msg {
-  padding: 12px;
-  border-radius: var(--radius-button);
-  font-size: 12px;
-  font-weight: 500;
+  padding: 14px 16px;
+  border-radius: var(--radius-card);
+  font-size: 13px;
+  font-weight: 600;
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .filter-result-msg.not-found {
   color: #C0392B;
-  background-color: rgba(192, 57, 43, 0.08);
-  border-color: rgba(192, 57, 43, 0.2);
+  background-color: var(--color-surface);
+  border: 1px solid rgba(192, 57, 43, 0.35);
+  box-shadow: 0 4px 12px rgba(192, 57, 43, 0.05);
 }
 
 /* ==========================================================================
@@ -1690,7 +1705,7 @@ button {
 .share-buttons-row {
   display: flex;
   align-items: center;
-  gap: 8px;
+  justify-content: space-between;
   padding: 14px 0;
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
@@ -1698,25 +1713,203 @@ button {
 }
 
 .share-label {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
-  margin-right: 4px;
+  color: var(--color-text);
+  letter-spacing: 0.5px;
 }
 
-.btn-share {
+.share-icons-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-share-square {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-button);
+  color: #FFFFFF;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-share-square:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.btn-share-square svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.btn-share-square.fb { background-color: #1877F2; }  /* Kotak biru */
+.btn-share-square.wa { background-color: #25D366; }  /* Kotak hijau */
+.btn-share-square.print { background-color: #6C757D; } /* Kotak abu */
+.btn-share-square.link { background-color: #212529; }  /* Kotak hitam */
+
+[data-theme="dark"] .btn-share-square.link {
+  background-color: #3A3C42;
+  border: 1px solid var(--color-border);
+}
+
+/* Auth Profile Bar di Atas Textarea Komentar */
+.comment-auth-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-button);
+  margin-bottom: 12px;
+}
+
+.comment-user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.comment-user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--color-border);
+}
+
+.comment-user-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.btn-google-logout {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
-  padding: 6px 12px;
-  border-radius: var(--radius-button);
-  color: #FFFFFF;
+  color: #C0392B;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.15s;
 }
 
-.btn-share.wa { background-color: #25D366; }
-.btn-share.fb { background-color: #1877F2; }
-.btn-share.tw { background-color: #1DA1F2; }
+.btn-google-logout:hover {
+  background-color: rgba(192, 57, 43, 0.1);
+}
+
+.btn-google-logout svg {
+  width: 15px;
+  height: 15px;
+  stroke: currentColor;
+}
+
+/* Warning Notification jika komentar kosong */
+.comment-warning-alert {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FFF3CD;
+  color: #856404;
+  border: 1px solid #FFEEBA;
+  padding: 10px 14px;
+  border-radius: var(--radius-button);
+  font-size: 12.5px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+[data-theme="dark"] .comment-warning-alert {
+  background-color: rgba(230, 126, 34, 0.2);
+  color: #F39C12;
+  border-color: rgba(230, 126, 34, 0.3);
+}
+
+.comment-warning-alert.is-visible {
+  display: flex;
+}
+
+.comment-warning-alert svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  flex-shrink: 0;
+}
+
+/* Actions Hapus / Edit pada Komentar */
+.comment-user-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.btn-comment-action {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-header-meta);
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 2px 4px;
+}
+
+.btn-comment-action:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.btn-comment-action.delete:hover {
+  color: #C0392B;
+}
+
+/* Google Sign-in Prompt & Modal */
+.google-signin-prompt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-button);
+  margin-bottom: 12px;
+}
+
+.btn-google-signin {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #FFFFFF;
+  color: #374151;
+  border: 1px solid #D1D5DB;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: var(--radius-button);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.btn-google-signin:hover {
+  background-color: #F9FAFB;
+}
+
+.btn-google-signin svg {
+  width: 16px;
+  height: 16px;
+}
 
 /* Article Pagination (jika multi-halaman) */
 .article-pagination {
@@ -1738,6 +1931,13 @@ button {
   font-size: 12px;
   font-weight: 600;
   color: var(--color-text);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.page-num-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 .page-num-btn.active {

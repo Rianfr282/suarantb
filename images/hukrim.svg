@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgHukrim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#962d22" />
+      <stop offset="100%" stop-color="#c0392b" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bgHukrim)" />
+  <!-- Forest Trees Silhouette -->
+  <path d="M0 340 L60 250 L80 270 L140 200 L160 230 L230 180 L290 280 L350 210 L420 310 L500 220 L580 320 L660 190 L740 300 L800 240 L800 450 L0 450 Z" fill="#2c3e50" opacity="0.6" />
+  <!-- Police Badge / Gavel icon silhouette -->
+  <g transform="translate(360, 90) scale(1.4)">
+    <polygon points="30,0 60,15 60,55 30,75 0,55 0,15" fill="#F1C40F" opacity="0.9" />
+    <path d="M22 25 L38 25 L38 30 L22 30 Z M28 30 L32 30 L32 50 L28 50 Z" fill="#2c3e50" />
+  </g>
+  <!-- Timber logs -->
+  <g transform="translate(240, 310)">
+    <rect x="0" y="20" width="320" height="35" rx="8" fill="#8B4513" stroke="#5c2e0b" stroke-width="3" />
+    <circle cx="310" cy="37" r="16" fill="#D2B48C" stroke="#8B4513" stroke-width="3" />
+    <rect x="40" y="-10" width="280" height="35" rx="8" fill="#A0522D" stroke="#5c2e0b" stroke-width="3" />
+    <circle cx="310" cy="7" r="16" fill="#DEB887" stroke="#A0522D" stroke-width="3" />
+  </g>
+  <rect x="30" y="30" width="280" height="46" rx="8" fill="#000000" opacity="0.6" />
+  <text x="45" y="60" font-family="'Inter', sans-serif" font-weight="800" font-size="20" fill="#FFFFFF">POLDA NTB - HUKRIM</text>
+</svg>

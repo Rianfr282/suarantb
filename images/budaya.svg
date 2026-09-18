@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgBudaya" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16a085" />
+      <stop offset="100%" stop-color="#2ecc71" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bgBudaya)" />
+  <!-- Beach Waves Senggigi -->
+  <path d="M0 260 Q150 210 300 240 T600 220 T800 240 L800 450 L0 450 Z" fill="#2980b9" opacity="0.7" />
+  <path d="M0 320 Q200 280 400 310 T800 290 L800 450 L0 450 Z" fill="#f39c12" opacity="0.8" />
+  <!-- Traditional Sasak Roof Silhouette -->
+  <g transform="translate(300, 70) scale(1.1)" fill="#d35400">
+    <path d="M100 20 Q50 90 0 110 L200 110 Q150 90 100 20 Z" />
+    <rect x="30" y="110" width="140" height="90" fill="#7f8c8d" />
+  </g>
+  <rect x="30" y="30" width="310" height="46" rx="8" fill="#000000" opacity="0.6" />
+  <text x="45" y="60" font-family="'Inter', sans-serif" font-weight="800" font-size="20" fill="#FFFFFF">BUDAYA & SENI NTB</text>
+</svg>

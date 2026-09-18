@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgPolitik" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4a235a" />
+      <stop offset="100%" stop-color="#8e44ad" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bgPolitik)" />
+  <!-- Rice Terraces & Parliament Pillars -->
+  <path d="M0 280 Q200 240 400 270 T800 250 L800 450 L0 450 Z" fill="#27ae60" opacity="0.8" />
+  <path d="M0 330 Q250 300 500 340 T800 310 L800 450 L0 450 Z" fill="#2ecc71" opacity="0.9" />
+  <!-- Parliament Dome Silhouette -->
+  <g transform="translate(300, 100) scale(1.1)" opacity="0.9">
+    <ellipse cx="90" cy="80" rx="90" ry="50" fill="#ecf0f1" />
+    <rect x="0" y="80" width="180" height="20" fill="#bdc3c7" />
+    <rect x="15" y="100" width="12" height="60" fill="#ecf0f1" />
+    <rect x="50" y="100" width="12" height="60" fill="#ecf0f1" />
+    <rect x="85" y="100" width="12" height="60" fill="#ecf0f1" />
+    <rect x="120" y="100" width="12" height="60" fill="#ecf0f1" />
+    <rect x="155" y="100" width="12" height="60" fill="#ecf0f1" />
+  </g>
+  <rect x="30" y="30" width="280" height="46" rx="8" fill="#000000" opacity="0.6" />
+  <text x="45" y="60" font-family="'Inter', sans-serif" font-weight="800" font-size="20" fill="#FFFFFF">DPRD NTB - POLITIK</text>
+</svg>

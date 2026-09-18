@@ -384,35 +384,33 @@ function initArchiveFilter() {
 
       // Logic: 31 Agustus 2026 -> 3 berita, lainnya -> tidak ada berita
       if (tgl === '31' && (bln === 'Agustus' || bln === '08') && thn === '2026') {
-        const matchingNews = SUARA_NTB_DATA.articles.filter(a => a.date.includes('31 Agustus 2026'));
+        const matchingNews = SUARA_NTB_DATA.articles.filter(a => a.date.includes('31 Agustus 2026')).slice(0, 3);
         resultArea.innerHTML = `
           <div class="filter-result-msg">Ditemukan ${matchingNews.length} berita</div>
-          <div class="card-list-group">
-            ${matchingNews.map(art => `
-              <article class="article-card">
-                <div class="card-thumb">
-                  <img src="${art.thumb}" alt="${art.title}" loading="lazy">
-                </div>
-                <div class="card-body">
-                  <span class="badge ${art.badgeClass}">${art.category}</span>
-                  <h3 class="card-title">
-                    <a href="isi-berita.html?id=${art.id}">${art.title}</a>
-                  </h3>
-                  <div class="card-meta">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <circle cx="12" cy="12" r="10"></circle>
-                      <polyline points="12 6 12 12 16 14"></polyline>
-                    </svg>
-                    <span>${art.date}</span>
+          <div class="section-frame">
+            <div class="category-unified-list">
+              ${matchingNews.map((art, idx) => `
+                <article class="category-sub-item">
+                  <div class="category-sub-thumb">
+                    <img src="${art.thumb}" alt="${escapeHTML(art.title)}" loading="lazy">
                   </div>
-                </div>
-              </article>
-            `).join('')}
+                  <div class="category-sub-body">
+                    <h4 class="category-sub-title">
+                      <a href="isi-berita.html?id=${art.id}">${escapeHTML(art.title)}</a>
+                    </h4>
+                    <div class="category-sub-meta">${art.date || '31 Agustus 2026'}, ${art.time || '10:00 WITA'}</div>
+                  </div>
+                </article>
+                ${idx < matchingNews.length - 1 ? '<div class="section-item-divider"></div>' : ''}
+              `).join('')}
+            </div>
           </div>
         `;
       } else {
         resultArea.innerHTML = `
-          <div class="filter-result-msg not-found">Tidak ada berita yang di temukan pada tanggal ini.</div>
+          <div class="filter-result-msg not-found">
+            Tidak ada berita yang di temukan pada tanggal ini (${escapeHTML(tgl)} ${escapeHTML(bln)} ${escapeHTML(thn)}).
+          </div>
         `;
       }
     });

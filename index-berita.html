@@ -117,63 +117,104 @@
         <h1 class="archive-title">Index Berita</h1>
         <p class="archive-desc">Cari arsip pemberitaan berdasarkan tanggal penerbitan.</p>
 
-        <form id="archiveFilterForm" class="filter-form-row">
-          <!-- Custom Select: Tanggal -->
-          <div class="custom-select-wrapper">
-            <input type="hidden" id="filterTanggal" value="31">
-            <div class="custom-select-trigger" tabindex="0">
-              <span class="select-label">31</span>
-              <span>▾</span>
+        <form id="archiveFilterForm" class="filter-flex-container">
+          <!-- Kolom Vertikal: Tanggal, Bulan, Tahun -->
+          <div class="filter-selects-vertical">
+            <!-- Custom Select: Tanggal (1-31) -->
+            <div class="custom-select-wrapper">
+              <input type="hidden" id="filterTanggal" value="31">
+              <div class="custom-select-trigger" tabindex="0">
+                <span class="select-label">31</span>
+                <span>▾</span>
+              </div>
+              <div class="custom-select-options">
+                <div class="custom-select-option" data-value="1">1</div>
+                <div class="custom-select-option" data-value="2">2</div>
+                <div class="custom-select-option" data-value="3">3</div>
+                <div class="custom-select-option" data-value="4">4</div>
+                <div class="custom-select-option" data-value="5">5</div>
+                <div class="custom-select-option" data-value="6">6</div>
+                <div class="custom-select-option" data-value="7">7</div>
+                <div class="custom-select-option" data-value="8">8</div>
+                <div class="custom-select-option" data-value="9">9</div>
+                <div class="custom-select-option" data-value="10">10</div>
+                <div class="custom-select-option" data-value="11">11</div>
+                <div class="custom-select-option" data-value="12">12</div>
+                <div class="custom-select-option" data-value="13">13</div>
+                <div class="custom-select-option" data-value="14">14</div>
+                <div class="custom-select-option" data-value="15">15</div>
+                <div class="custom-select-option" data-value="16">16</div>
+                <div class="custom-select-option" data-value="17">17</div>
+                <div class="custom-select-option" data-value="18">18</div>
+                <div class="custom-select-option" data-value="19">19</div>
+                <div class="custom-select-option" data-value="20">20</div>
+                <div class="custom-select-option" data-value="21">21</div>
+                <div class="custom-select-option" data-value="22">22</div>
+                <div class="custom-select-option" data-value="23">23</div>
+                <div class="custom-select-option" data-value="24">24</div>
+                <div class="custom-select-option" data-value="25">25</div>
+                <div class="custom-select-option" data-value="26">26</div>
+                <div class="custom-select-option" data-value="27">27</div>
+                <div class="custom-select-option" data-value="28">28</div>
+                <div class="custom-select-option" data-value="29">29</div>
+                <div class="custom-select-option" data-value="30">30</div>
+                <div class="custom-select-option is-selected" data-value="31">31</div>
+              </div>
             </div>
-            <div class="custom-select-options">
-              <div class="custom-select-option is-selected" data-value="31">31</div>
-              <div class="custom-select-option" data-value="30">30</div>
-              <div class="custom-select-option" data-value="29">29</div>
-              <div class="custom-select-option" data-value="28">28</div>
-              <div class="custom-select-option" data-value="27">27</div>
-              <div class="custom-select-option" data-value="26">26</div>
-              <div class="custom-select-option" data-value="25">25</div>
+
+            <!-- Custom Select: Bulan (Januari - Desember) -->
+            <div class="custom-select-wrapper">
+              <input type="hidden" id="filterBulan" value="Agustus">
+              <div class="custom-select-trigger" tabindex="0">
+                <span class="select-label">Agustus</span>
+                <span>▾</span>
+              </div>
+              <div class="custom-select-options">
+                <div class="custom-select-option" data-value="Januari">Januari</div>
+                <div class="custom-select-option" data-value="Februari">Februari</div>
+                <div class="custom-select-option" data-value="Maret">Maret</div>
+                <div class="custom-select-option" data-value="April">April</div>
+                <div class="custom-select-option" data-value="Mei">Mei</div>
+                <div class="custom-select-option" data-value="Juni">Juni</div>
+                <div class="custom-select-option" data-value="Juli">Juli</div>
+                <div class="custom-select-option is-selected" data-value="Agustus">Agustus</div>
+                <div class="custom-select-option" data-value="September">September</div>
+                <div class="custom-select-option" data-value="Oktober">Oktober</div>
+                <div class="custom-select-option" data-value="November">November</div>
+                <div class="custom-select-option" data-value="Desember">Desember</div>
+              </div>
+            </div>
+
+            <!-- Custom Select: Tahun (2010 - 2026) -->
+            <div class="custom-select-wrapper">
+              <input type="hidden" id="filterTahun" value="2026">
+              <div class="custom-select-trigger" tabindex="0">
+                <span class="select-label">2026</span>
+                <span>▾</span>
+              </div>
+              <div class="custom-select-options">
+                <div class="custom-select-option is-selected" data-value="2026">2026</div>
+                <div class="custom-select-option" data-value="2025">2025</div>
+                <div class="custom-select-option" data-value="2024">2024</div>
+                <div class="custom-select-option" data-value="2023">2023</div>
+                <div class="custom-select-option" data-value="2022">2022</div>
+                <div class="custom-select-option" data-value="2021">2021</div>
+                <div class="custom-select-option" data-value="2020">2020</div>
+                <div class="custom-select-option" data-value="2019">2019</div>
+                <div class="custom-select-option" data-value="2018">2018</div>
+                <div class="custom-select-option" data-value="2017">2017</div>
+                <div class="custom-select-option" data-value="2016">2016</div>
+                <div class="custom-select-option" data-value="2015">2015</div>
+                <div class="custom-select-option" data-value="2014">2014</div>
+                <div class="custom-select-option" data-value="2013">2013</div>
+                <div class="custom-select-option" data-value="2012">2012</div>
+                <div class="custom-select-option" data-value="2011">2011</div>
+                <div class="custom-select-option" data-value="2010">2010</div>
+              </div>
             </div>
           </div>
 
-          <!-- Custom Select: Bulan -->
-          <div class="custom-select-wrapper">
-            <input type="hidden" id="filterBulan" value="Agustus">
-            <div class="custom-select-trigger" tabindex="0">
-              <span class="select-label">Agustus</span>
-              <span>▾</span>
-            </div>
-            <div class="custom-select-options">
-              <div class="custom-select-option" data-value="Januari">Januari</div>
-              <div class="custom-select-option" data-value="Februari">Februari</div>
-              <div class="custom-select-option" data-value="Maret">Maret</div>
-              <div class="custom-select-option" data-value="April">April</div>
-              <div class="custom-select-option" data-value="Mei">Mei</div>
-              <div class="custom-select-option" data-value="Juni">Juni</div>
-              <div class="custom-select-option" data-value="Juli">Juli</div>
-              <div class="custom-select-option is-selected" data-value="Agustus">Agustus</div>
-              <div class="custom-select-option" data-value="September">September</div>
-              <div class="custom-select-option" data-value="Oktober">Oktober</div>
-              <div class="custom-select-option" data-value="November">November</div>
-              <div class="custom-select-option" data-value="Desember">Desember</div>
-            </div>
-          </div>
-
-          <!-- Custom Select: Tahun -->
-          <div class="custom-select-wrapper">
-            <input type="hidden" id="filterTahun" value="2026">
-            <div class="custom-select-trigger" tabindex="0">
-              <span class="select-label">2026</span>
-              <span>▾</span>
-            </div>
-            <div class="custom-select-options">
-              <div class="custom-select-option is-selected" data-value="2026">2026</div>
-              <div class="custom-select-option" data-value="2025">2025</div>
-              <div class="custom-select-option" data-value="2024">2024</div>
-            </div>
-          </div>
-
-          <!-- Filter Submit Button -->
+          <!-- Filter Submit Button di Sebelah Kanan Vertikal Form -->
           <button type="submit" class="btn-filter-submit">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
@@ -182,7 +223,7 @@
           </button>
         </form>
 
-        <!-- Area Hasil Filter (bergeser dinamis) -->
+        <!-- Area Hasil Filter (Terpisah dari frame filter) -->
         <div id="archiveResultArea" class="filter-result-area"></div>
       </section>
 
@@ -225,7 +266,7 @@
                 <!-- 1 -->
                 <article class="category-sub-item">
                   <div class="category-sub-thumb">
-                    <img src="https://images.unsplash.com/photo-1578874691223-a49262e0c94f?w=400&auto=format&fit=crop&q=80" alt="Gubernur NTB Tinjau Mandalika" loading="lazy">
+                    <img src="images/mandalika.svg" alt="Gubernur NTB Tinjau Mandalika" loading="lazy">
                   </div>
                   <div class="category-sub-body">
                     <h4 class="category-sub-title"><a href="isi-berita.html?id=101">Gubernur NTB Tinjau Kesiapan Infrastruktur Jalan Menuju Sirkuit Mandalika</a></h4>
@@ -363,7 +404,7 @@
               <article class="comment-thumb-card">
                 <div class="comment-thumb-top">
                   <div class="comment-news-thumb">
-                    <img src="https://images.unsplash.com/photo-1578874691223-a49262e0c94f?w=300&auto=format&fit=crop&q=80" alt="Infrastruktur Mandalika" loading="lazy">
+                    <img src="images/mandalika.svg" alt="Infrastruktur Mandalika" loading="lazy">
                   </div>
                   <div class="comment-thumb-header">
                     <a href="isi-berita.html?id=1" class="comment-thumb-title">Gubernur NTB Tinjau Kesiapan Infrastruktur Jalan Menuju Sirkuit Mandalika</a>

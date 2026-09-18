@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgPon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D35400" />
+      <stop offset="100%" stop-color="#F39C12" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bgPon)" />
+  <!-- Stadium Track Curves -->
+  <ellipse cx="400" cy="480" rx="420" ry="240" fill="#C0392B" />
+  <ellipse cx="400" cy="480" rx="350" ry="190" fill="#27AE60" />
+  <ellipse cx="400" cy="480" rx="270" ry="140" fill="#2980B9" />
+  <!-- Running Track Lines -->
+  <ellipse cx="400" cy="480" rx="415" ry="235" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-dasharray="15,10" />
+  <ellipse cx="400" cy="480" rx="385" ry="210" fill="none" stroke="#FFFFFF" stroke-width="4" />
+  <!-- Torch / Flame Symbol -->
+  <g transform="translate(370, 70) scale(1.5)">
+    <path d="M20 70 L30 110 L10 110 Z" fill="#BDC3C7" />
+    <path d="M20 15 Q35 40 25 65 Q15 45 10 55 Q5 35 20 15 Z" fill="#F1C40F" />
+    <path d="M20 25 Q30 45 22 65 Q15 50 12 55 Q10 40 20 25 Z" fill="#E74C3C" />
+  </g>
+  <rect x="30" y="30" width="280" height="46" rx="8" fill="#000000" opacity="0.6" />
+  <text x="45" y="60" font-family="'Inter', sans-serif" font-weight="800" font-size="20" fill="#FFFFFF">KONTINGEN PON NTB</text>
+</svg>

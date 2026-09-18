@@ -175,42 +175,106 @@
               </div>
             </div>
 
-            <!-- Tombol Share -->
+            <!-- Tombol Share (Sejajar dengan Tulisan Bagikan, Ikon Kotak Warna-warni di Pojok Kanan) -->
             <div class="share-buttons-row">
               <span class="share-label">BAGIKAN:</span>
-              <a href="https://api.whatsapp.com/send?text=Gubernur%20NTB%20Tinjau%20Kesiapan%20Infrastruktur" target="_blank" rel="noopener" class="btn-share wa">
-                WhatsApp
-              </a>
-              <a href="https://facebook.com/sharer/sharer.php" target="_blank" rel="noopener" class="btn-share fb">
-                Facebook
-              </a>
-              <a href="https://twitter.com/intent/tweet" target="_blank" rel="noopener" class="btn-share tw">
-                Twitter / X
-              </a>
+              <div class="share-icons-group">
+                <!-- Facebook (Kotak Biru) -->
+                <a href="https://facebook.com/sharer/sharer.php" target="_blank" rel="noopener" class="btn-share-square fb" title="Bagikan ke Facebook" aria-label="Facebook">
+                  <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                </a>
+                <!-- WhatsApp (Kotak Hijau) -->
+                <a href="https://api.whatsapp.com/send?text=Gubernur%20NTB%20Tinjau%20Kesiapan%20Infrastruktur" target="_blank" rel="noopener" class="btn-share-square wa" title="Bagikan ke WhatsApp" aria-label="WhatsApp">
+                  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.979-.277-.1-.478-.15-.68.15-.2.3-.777.98-.953 1.18-.176.2-.352.226-.653.075-1.928-.962-3.189-1.716-4.457-3.896-.334-.575.334-.533.957-1.776.1-.2.05-.376-.025-.526-.075-.15-.68-1.637-.93-2.242-.244-.589-.492-.509-.676-.518l-.577-.01c-.2 0-.526.075-.802.376-.276.301-1.053 1.028-1.053 2.508 0 1.48 1.078 2.909 1.229 3.109.15.2 2.122 3.24 5.141 4.544 2.245.968 3.104.975 4.223.809.684-.102 1.78-.727 2.031-1.43.25-.702.25-1.304.175-1.43-.075-.125-.276-.2-.577-.35zM12.04 2C6.495 2 2 6.495 2 12.04c0 1.97.57 3.81 1.56 5.36L2.1 22l4.74-1.45a10.02 10.02 0 0 0 5.2 1.49c5.545 0 10.04-4.495 10.04-10.04C22.08 6.495 17.585 2 12.04 2z"/></svg>
+                </a>
+                <!-- Print (Kotak Abu) -->
+                <button type="button" class="btn-share-square print" onclick="window.print()" title="Cetak Halaman" aria-label="Print">
+                  <svg viewBox="0 0 24 24"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8" rx="1"/></svg>
+                </button>
+                <!-- Copy Link (Kotak Hitam) -->
+                <button type="button" class="btn-share-square link" id="btnCopyLink" title="Salin Tautan" aria-label="Copy Link">
+                  <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                </button>
+              </div>
             </div>
 
             <!-- Bagian Komentar Pembaca -->
             <section class="article-comments-section" style="margin-top: 24px;">
               <div class="section-header">
-                <h3 class="section-title">Komentar Pembaca (1)</h3>
+                <h3 class="section-title">Komentar Pembaca (<span id="readerCommentsCount">1</span>)</h3>
               </div>
-              <div class="comment-card-list">
-                <div class="comment-card">
-                  <div class="comment-avatar">H</div>
-                  <div class="comment-body">
-                    <span class="comment-author">Hendra Wijaya</span>
-                    <span style="font-size: 10px; color: var(--color-header-meta); display: block; margin-bottom: 4px;">31 Agustus 2026, 15:10 WITA</span>
-                    <p class="comment-text">"Semoga jalan bypass dan penerangan lampu selesai tepat waktu, sangat membantu warga sekitar!"</p>
+              
+              <!-- Container Komentar Pembaca -->
+              <div class="comment-thumb-list" id="readerCommentsList">
+                <article class="comment-thumb-card" id="comment-default-1">
+                  <div class="comment-thumb-top">
+                    <div class="comment-news-thumb">
+                      <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=200&auto=format&fit=crop&q=80" alt="Avatar Hendra Wijaya" style="border-radius: 50%;">
+                    </div>
+                    <div class="comment-thumb-header">
+                      <div style="font-size: 13px; font-weight: 700; color: var(--color-text);">Hendra Wijaya</div>
+                      <div class="comment-thumb-time">31 Agustus 2026, 15:10 WITA</div>
+                    </div>
                   </div>
-                </div>
+                  <div class="comment-thumb-divider"></div>
+                  <div class="comment-thumb-bottom">
+                    Semoga jalan bypass dan penerangan lampu selesai tepat waktu, sangat membantu warga sekitar!
+                  </div>
+                </article>
               </div>
 
-              <!-- Form Tambah Komentar -->
-              <form class="comment-form-box" onsubmit="event.preventDefault(); alert('Terima kasih! Komentar Anda berhasil dikirim dan menunggu moderasi.'); this.reset();">
-                <label for="commentInput" style="font-size: 12px; font-weight: 600; display: block; margin-bottom: 6px;">Tinggalkan Komentar</label>
-                <textarea id="commentInput" class="comment-input" rows="3" placeholder="Tulis komentar atau tanggapan Anda di sini..." required></textarea>
-                <button type="submit" class="btn-submit-comment">Kirim Komentar</button>
-              </form>
+              <!-- Form Tambah Komentar dengan Integrasi Akun Google -->
+              <div class="comment-form-box" style="margin-top: 16px;">
+                <label style="font-size: 13px; font-weight: 700; display: block; margin-bottom: 10px;">Tinggalkan Komentar</label>
+                
+                <!-- State 1: Prompt Login Google jika belum login -->
+                <div id="googleSignInPrompt" class="google-signin-prompt">
+                  <span style="font-size: 12px; color: var(--color-text); opacity: 0.85;">Anda harus masuk dengan akun Google untuk mengirim komentar</span>
+                  <button type="button" id="btnGoogleLogin" class="btn-google-signin">
+                    <svg viewBox="0 0 24 24">
+                      <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                      <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                      <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                      <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+                    </svg>
+                    Masuk dengan Google
+                  </button>
+                </div>
+
+                <!-- State 2: Info Profil Pengguna setelah Login -->
+                <div id="googleAuthProfileBar" class="comment-auth-bar" style="display: none;">
+                  <div class="comment-user-info">
+                    <img id="authUserAvatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&auto=format&fit=crop&q=80" alt="Foto Profil Akun Google" class="comment-user-avatar">
+                    <span id="authUserName" class="comment-user-name">Pengguna Google</span>
+                  </div>
+                  <button type="button" id="btnGoogleLogout" class="btn-google-logout" title="Keluar dari akun Google">
+                    Keluar
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                      <polyline points="16 17 21 12 16 7"></polyline>
+                      <line x1="21" y1="12" x2="9" y2="12"></line>
+                    </svg>
+                  </button>
+                </div>
+
+                <!-- Warning Alert jika komentar kosong -->
+                <div id="commentWarningAlert" class="comment-warning-alert">
+                  <span>Anda belum menuliskan komentar!</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                    <line x1="12" y1="9" x2="12" y2="13"></line>
+                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                  </svg>
+                </div>
+
+                <!-- Textarea Komentar -->
+                <textarea id="commentInput" class="comment-input" rows="3" placeholder="Tulis komentar atau tanggapan Anda di sini..."></textarea>
+                
+                <!-- Tombol Submit / Sign In dinamis -->
+                <button type="button" id="btnSubmitCommentAction" class="btn-submit-comment">
+                  Masuk dengan Google
+                </button>
+              </div>
             </section>
 
           </article>
@@ -566,40 +630,45 @@
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
   <script>
-    // Dynamic rendering of article if query param id is given
     (function() {
+      // 1. Data Halaman Artikel Panjang (~60 baris total, dibagi 2 halaman jika > 60 baris)
       const urlParams = new URLSearchParams(window.location.search);
-      const articleId = parseInt(urlParams.get('id'), 10);
-      if (!articleId) return;
+      const articleId = parseInt(urlParams.get('id'), 10) || 1;
+      const art = SUARA_NTB_DATA.articles.find(a => a.id === articleId) || SUARA_NTB_DATA.articles[0];
 
-      const art = SUARA_NTB_DATA.articles.find(a => a.id === articleId);
-      if (!art) return;
+      if (art) {
+        document.getElementById('pageTitle').textContent = `${art.title} — SuaraNTB`;
+        document.getElementById('breadcrumbCategory').textContent = (art.category || 'EKONOMI').toUpperCase();
+        document.getElementById('breadcrumbCategory').href = `kategori.html?slug=${encodeURIComponent((art.category || 'ekonomi').toLowerCase())}`;
+        
+        const badge = document.getElementById('detailBadge');
+        if (badge) {
+          badge.textContent = art.category || 'Ekonomi';
+          badge.className = `badge ${art.badgeClass || 'badge-ekonomi'}`;
+        }
 
-      document.getElementById('pageTitle').textContent = `${art.title} — SuaraNTB`;
-      document.getElementById('breadcrumbCategory').textContent = art.category.toUpperCase();
-      document.getElementById('breadcrumbCategory').href = `kategori.html?slug=${encodeURIComponent(art.category.toLowerCase())}`;
-      
-      const badge = document.getElementById('detailBadge');
-      badge.textContent = art.category;
-      badge.className = `badge ${art.badgeClass}`;
+        document.getElementById('detailTitle').textContent = art.title;
+        document.getElementById('detailAuthor').textContent = `Oleh: ${art.author || 'Redaksi SuaraNTB'}`;
+        document.getElementById('detailDate').textContent = `${art.date || '31 Agustus 2026'}, ${art.time || '14:30 WITA'}`;
+        document.getElementById('detailThumb').src = art.thumb;
 
-      document.getElementById('detailTitle').textContent = art.title;
-      document.getElementById('detailAuthor').textContent = `Oleh: ${art.author}`;
-      document.getElementById('detailDate').textContent = `${art.date}, ${art.time}`;
-      document.getElementById('detailThumb').src = art.thumb;
-
-      const tagsContainer = document.getElementById('detailTags');
-      if (tagsContainer && art.tags) {
-        tagsContainer.innerHTML = art.tags.map(t => `
-          <a href="pencarian.html?q=${encodeURIComponent(t)}" class="article-tag-link"># ${t}</a>
-        `).join('');
+        const tagsContainer = document.getElementById('detailTags');
+        if (tagsContainer && art.tags) {
+          tagsContainer.innerHTML = art.tags.map(t => `
+            <a href="pencarian.html?q=${encodeURIComponent(t)}" class="article-tag-link"># ${t}</a>
+          `).join('');
+        }
       }
 
-      const contentBox = document.getElementById('detailContent');
-      if (contentBox && art.content) {
-        // preserve "Baca Juga" box inside article
-        contentBox.innerHTML = `
-          ${art.content}
+      // 2. Artikel Panjang (> 60 baris paragraf & sub-topik) dengan Paginasi Aktif (Hal 1, 2, Selanjutnya)
+      const articlePages = [
+        // Halaman 1 (~35 baris bacaan kaya informasi)
+        `
+          <p><strong>Lombok Tengah</strong> — Pemerintah Provinsi Nusa Tenggara Barat (NTB) bersama Dinas Pekerjaan Umum dan Penataan Ruang (PUPR) terus mematangkan percepatan realisasi infrastruktur pendukung di sekitar Kawasan Ekonomi Khusus (KEK) Mandalika. Peninjauan lapangan secara maraton dipimpin langsung oleh jajaran pimpinan daerah guna memastikan integrasi konektivitas antar-wilayah berjalan selaras dengan standar internasional yang ditetapkan.</p>
+          <p>Dalam agenda kunjungan kerja tersebut, evaluasi difokuskan pada penguatan badan jalan, drainase pencegah genangan di musim penghujan, serta pemasangan marka jalan berdaya pantul tinggi demi keamanan pengguna jalan saat malam hari.</p>
+          <p>"Pembangunan infrastruktur ini bukan sekadar mengejar momentum penyelenggaraan event internasional tahunan, melainkan investasi jangka panjang yang akan dinikmati oleh anak cucu kita di NTB," tegas pimpinan daerah saat meninjau titik bypass kilometer 14.</p>
+          <p>Lebih lanjut, Dinas PUPR menyampaikan bahwa pembangunan koridor penyangga ini melibatkan ratusan tenaga kerja lokal dan puluhan kontraktor daerah. Pendekatan padat karya sengaja diterapkan agar perputaran ekonomi langsung dirasakan oleh masyarakat sekitar lingkar sirkuit.</p>
+          
           <aside class="baca-juga-box">
             <div class="baca-juga-title">Baca Juga:</div>
             <div class="related-list">
@@ -611,9 +680,280 @@
               </div>
             </div>
           </aside>
-          <p>Masyarakat NTB berharap keberadaan sarana dan prasarana ini dapat memacu kebangkitan ekonomi sektor riil dan kesejahteraan masyarakat secara luas.</p>
-        `;
+
+          <p>Kementerian Perhubungan turut memberikan dukungan strategis melalui penambahan 120 titik lampu penerangan jalan umum bertenaga panel surya. Inovasi ramah lingkungan ini sejalan dengan konsep green tourism yang digaungkan oleh Pemerintah NTB dalam merawat kelestarian alam pesisir selatan Lombok.</p>
+          <p>Masyarakat desa penyangga Mandalika menyambut gembira rampungnya segmen utama bypass ini. Waktu tempuh dari Bandara Internasional Lombok menuju sirkuit kini terpangkas signifikan dari sebelumnya 45 menit menjadi hanya 15 menit saja.</p>
+        `,
+        // Halaman 2 (~35 baris kelanjutan mendalam)
+        `
+          <p>Memasuki fase kedua pembangunan, konsorsium pelaksana proyek kini memprioritaskan penataan lanskap hijau, trotoar pejalan kaki ramah disabilitas, dan jalur khusus pesepeda sepanjang 12 kilometer menyusuri bibir pantai selatan.</p>
+          <p>Ketua Asosiasi Perhotelan dan Restoran NTB menyatakan optimisme tingginya tingkat okupansi akomodasi wisata menyusul semakin mulusnya akses transportasi darat. Investor sektor perhotelan bintang empat dan vila butik mulai merealisasikan perluasan kapasitas kamar.</p>
+          <p>"Akses jalan yang nyaman dan mulus merupakan etalase pertama kenyamanan tamu mancanegara ketika mendarat di Pulau Seribu Masjid," ungkap perwakilan pelaku industri pariwisata.</p>
+          <p>Tak hanya sektor pariwisata, sektor logistik dan distribusi hasil pertanian masyarakat dari Lombok Timur dan Lombok Barat menuju pelabuhan penyeberangan kini kian efisien dengan menipisnya hambatan kemacetan di jalan arteri lama.</p>
+          <p>Dinas Lingkungan Hidup NTB juga menjadwalkan penanaman 5.000 bibit pohon bougenville dan trembesi di sepanjang median jalan. Gerakan penghijauan ini ditargetkan tuntas sebelum musim penghujan tiba, sehingga mempercantik lanskap perjalanan wisatawan yang melintas.</p>
+          <p>Gubernur NTB mengimbau seluruh elemen masyarakat untuk bersama-sama menjaga fasilitas publik yang telah dibangun dengan tidak merusak rambu lalu lintas serta menjaga kebersihan lingkungan dari sampah plastik.</p>
+          <p>Dengan rampungnya seluruh infrastruktur pendukung ini, NTB kian mengukuhkan posisinya sebagai destinasi sport tourism kelas dunia yang berdaya saing tinggi dan berakar kuat pada nilai-nilai kearifan lokal.</p>
+        `
+      ];
+
+      let currentPage = 1;
+      const totalPages = articlePages.length;
+      const contentBox = document.getElementById('detailContent');
+      const paginationBox = document.querySelector('.article-pagination');
+
+      function showArticlePage(page) {
+        currentPage = page;
+        if (contentBox) {
+          contentBox.innerHTML = articlePages[currentPage - 1];
+        }
+
+        // Render tombol paginasi interaktif
+        if (paginationBox) {
+          paginationBox.innerHTML = `
+            <button type="button" class="page-num-btn ${currentPage === 1 ? 'active' : ''}" data-page="1">1</button>
+            <button type="button" class="page-num-btn ${currentPage === 2 ? 'active' : ''}" data-page="2">2</button>
+            <button type="button" class="page-num-btn" id="btnNextPage" style="width: auto; padding: 0 12px;">
+              ${currentPage < totalPages ? 'Selanjutnya →' : 'Kembali ke Hal 1'}
+            </button>
+          `;
+
+          // Event listener tombol 1 & 2
+          paginationBox.querySelectorAll('.page-num-btn[data-page]').forEach(btn => {
+            btn.addEventListener('click', () => {
+              const p = parseInt(btn.getAttribute('data-page'), 10);
+              showArticlePage(p);
+              contentBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+          });
+
+          // Event listener tombol selanjutnya
+          const nextBtn = document.getElementById('btnNextPage');
+          if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+              const nextP = currentPage < totalPages ? currentPage + 1 : 1;
+              showArticlePage(nextP);
+              contentBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+          }
+        }
       }
+
+      showArticlePage(1);
+
+      // 3. Tombol Copy Link
+      const btnCopyLink = document.getElementById('btnCopyLink');
+      if (btnCopyLink) {
+        btnCopyLink.addEventListener('click', () => {
+          navigator.clipboard.writeText(window.location.href).then(() => {
+            alert('Tautan berita berhasil disalin ke clipboard!');
+          }).catch(() => {
+            prompt('Salin tautan berita ini:', window.location.href);
+          });
+        });
+      }
+
+      // 4. Sistem Login Akun Google & Komentar Lengkap
+      let currentUser = JSON.parse(localStorage.getItem('google_user')) || null;
+
+      const promptBox = document.getElementById('googleSignInPrompt');
+      const profileBar = document.getElementById('googleAuthProfileBar');
+      const userAvatar = document.getElementById('authUserAvatar');
+      const userName = document.getElementById('authUserName');
+      const btnLogin = document.getElementById('btnGoogleLogin');
+      const btnLogout = document.getElementById('btnGoogleLogout');
+      const btnSubmit = document.getElementById('btnSubmitCommentAction');
+      const commentInput = document.getElementById('commentInput');
+      const warningAlert = document.getElementById('commentWarningAlert');
+      const readerList = document.getElementById('readerCommentsList');
+      const readerCount = document.getElementById('readerCommentsCount');
+
+      function updateAuthUI() {
+        if (currentUser) {
+          if (promptBox) promptBox.style.display = 'none';
+          if (profileBar) profileBar.style.display = 'flex';
+          if (userAvatar) userAvatar.src = currentUser.avatar;
+          if (userName) userName.textContent = currentUser.name;
+          if (btnSubmit) {
+            btnSubmit.textContent = 'Kirim Komentar';
+            btnSubmit.className = 'btn-submit-comment';
+          }
+        } else {
+          if (promptBox) promptBox.style.display = 'flex';
+          if (profileBar) profileBar.style.display = 'none';
+          if (btnSubmit) {
+            btnSubmit.textContent = 'Masuk dengan Google';
+            btnSubmit.className = 'btn-submit-comment';
+          }
+        }
+      }
+
+      function simulateGoogleLogin() {
+        const simulatedUsers = [
+          { name: "Muhammad Zaidan", avatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=120&auto=format&fit=crop&q=80", email: "zaidan@gmail.com" },
+          { name: "Baiq Safira", avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&auto=format&fit=crop&q=80", email: "safira@gmail.com" },
+          { name: "Lalu Arya Pratama", avatar: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=120&auto=format&fit=crop&q=80", email: "arya@gmail.com" }
+        ];
+        const selected = simulatedUsers[Math.floor(Math.random() * simulatedUsers.length)];
+        currentUser = selected;
+        localStorage.setItem('google_user', JSON.stringify(currentUser));
+        updateAuthUI();
+        if (warningAlert) warningAlert.classList.remove('is-visible');
+      }
+
+      function logoutGoogle() {
+        currentUser = null;
+        localStorage.removeItem('google_user');
+        updateAuthUI();
+        renderReaderComments();
+      }
+
+      if (btnLogin) btnLogin.addEventListener('click', simulateGoogleLogin);
+      if (btnLogout) btnLogout.addEventListener('click', logoutGoogle);
+
+      // Load komentar tersimpan
+      let storedComments = JSON.parse(localStorage.getItem('user_comments_db')) || [];
+
+      function renderReaderComments() {
+        // Gabungkan komentar default dengan komentar user
+        const allComments = [
+          {
+            id: 'default-1',
+            author: 'Hendra Wijaya',
+            avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=200&auto=format&fit=crop&q=80',
+            time: '31 Agustus 2026, 15:10 WITA',
+            text: 'Semoga jalan bypass dan penerangan lampu selesai tepat waktu, sangat membantu warga sekitar!',
+            isOwner: false
+          },
+          ...storedComments.map(c => ({
+            ...c,
+            isOwner: currentUser && currentUser.email === c.userEmail
+          }))
+        ];
+
+        if (readerCount) readerCount.textContent = allComments.length;
+
+        if (readerList) {
+          readerList.innerHTML = allComments.map(c => `
+            <article class="comment-thumb-card" id="comment-${c.id}">
+              <div class="comment-thumb-top">
+                <div class="comment-news-thumb">
+                  <img src="${c.avatar}" alt="${c.author}" style="border-radius: 50%;">
+                </div>
+                <div class="comment-thumb-header">
+                  <div style="font-size: 13px; font-weight: 700; color: var(--color-text);">${escapeHTML(c.author)}</div>
+                  <div class="comment-thumb-time">${escapeHTML(c.time)}</div>
+                </div>
+              </div>
+              <div class="comment-thumb-divider"></div>
+              <div class="comment-thumb-bottom">
+                <span id="comment-text-${c.id}">${escapeHTML(c.text)}</span>
+                ${c.isOwner ? `
+                  <div class="comment-user-actions">
+                    <button type="button" class="btn-comment-action edit" onclick="editUserComment('${c.id}')">Edit</button>
+                    <span>•</span>
+                    <button type="button" class="btn-comment-action delete" onclick="deleteUserComment('${c.id}')">Hapus</button>
+                  </div>
+                ` : ''}
+              </div>
+            </article>
+          `).join('');
+        }
+
+        // Sinkronkan ke sidebar "Komentar di Berita Lainnya" jika ada
+        const sidebarList = document.querySelector('.sidebar-column .comment-thumb-list');
+        if (sidebarList && storedComments.length > 0) {
+          const latestUserComment = storedComments[storedComments.length - 1];
+          const existingUserCard = document.getElementById('sidebar-user-comment');
+          const userCardHTML = `
+            <article class="comment-thumb-card" id="sidebar-user-comment">
+              <div class="comment-thumb-top">
+                <div class="comment-news-thumb">
+                  <img src="${latestUserComment.avatar}" alt="${escapeHTML(latestUserComment.author)}" style="border-radius: 50%;">
+                </div>
+                <div class="comment-thumb-header">
+                  <a href="isi-berita.html?id=${articleId}" class="comment-thumb-title">${escapeHTML(art.title)}</a>
+                  <div class="comment-thumb-time">${escapeHTML(latestUserComment.time)}</div>
+                </div>
+              </div>
+              <div class="comment-thumb-divider"></div>
+              <div class="comment-thumb-bottom">
+                <span class="comment-thumb-author">${escapeHTML(latestUserComment.author)}:</span> ${escapeHTML(latestUserComment.text)}
+              </div>
+            </article>
+          `;
+          if (existingUserCard) {
+            existingUserCard.outerHTML = userCardHTML;
+          } else {
+            sidebarList.insertAdjacentHTML('afterbegin', userCardHTML);
+          }
+        }
+      }
+
+      window.deleteUserComment = function(id) {
+        if (confirm('Apakah Anda yakin ingin menghapus komentar ini?')) {
+          storedComments = storedComments.filter(c => c.id !== id);
+          localStorage.setItem('user_comments_db', JSON.stringify(storedComments));
+          renderReaderComments();
+        }
+      };
+
+      window.editUserComment = function(id) {
+        const item = storedComments.find(c => c.id === id);
+        if (!item) return;
+        const newText = prompt('Ubah komentar Anda:', item.text);
+        if (newText !== null && newText.trim() !== '') {
+          item.text = newText.trim();
+          localStorage.setItem('user_comments_db', JSON.stringify(storedComments));
+          renderReaderComments();
+        }
+      };
+
+      // Handle Kirim Komentar
+      if (btnSubmit) {
+        btnSubmit.addEventListener('click', () => {
+          if (!currentUser) {
+            simulateGoogleLogin();
+            return;
+          }
+
+          const text = commentInput ? commentInput.value.trim() : '';
+          if (!text) {
+            if (warningAlert) warningAlert.classList.add('is-visible');
+            return;
+          }
+
+          if (warningAlert) warningAlert.classList.remove('is-visible');
+
+          const now = new Date();
+          const timeStr = `${now.getDate()} Agustus 2026, ${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')} WITA`;
+
+          const newComment = {
+            id: 'c_' + Date.now(),
+            author: currentUser.name,
+            avatar: currentUser.avatar,
+            userEmail: currentUser.email,
+            time: timeStr,
+            text: text
+          };
+
+          storedComments.push(newComment);
+          localStorage.setItem('user_comments_db', JSON.stringify(storedComments));
+          
+          if (commentInput) commentInput.value = '';
+          renderReaderComments();
+        });
+      }
+
+      if (commentInput) {
+        commentInput.addEventListener('input', () => {
+          if (commentInput.value.trim() && warningAlert) {
+            warningAlert.classList.remove('is-visible');
+          }
+        });
+      }
+
+      updateAuthUI();
+      renderReaderComments();
     })();
   </script>
 </body>
