@@ -118,19 +118,29 @@
         <div class="main-column">
           
           <article class="article-detail-wrap">
-            <!-- Header Artikel -->
+            <!-- Header Artikel (judul saja; label kategori dipindah ke atas gambar) -->
             <header class="article-header">
-              <span id="detailBadge" class="badge badge-ekonomi">Ekonomi</span>
               <h1 id="detailTitle" class="article-header-title">Gubernur NTB Tinjau Kesiapan Infrastruktur Jalan Menuju Sirkuit Mandalika</h1>
-              <div class="article-author-row">
-                <span id="detailAuthor">Oleh: Ahmad Rifai</span>
-                <span>•</span>
-                <span id="detailDate">Senin, 31 Agustus 2026, 14:30 WITA</span>
-              </div>
             </header>
 
-            <!-- Gambar Utama + Caption -->
+            <!-- Gambar Utama + Info Bar (penerbit | tanggal | kategori) + Caption -->
             <figure class="article-main-image-wrap">
+              <div class="article-info-bar">
+                <span class="article-info-item">
+                  <svg class="info-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                  <span id="detailAuthor">Ahmad Rifai</span>
+                </span>
+                <span class="article-info-sep">|</span>
+                <span class="article-info-item">
+                  <svg class="info-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  <span id="detailDate">31 Agustus 2026</span>
+                </span>
+                <span class="article-info-sep">|</span>
+                <span class="article-info-item">
+                  <svg class="info-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+                  <span id="detailBadge">Ekonomi</span>
+                </span>
+              </div>
               <img id="detailThumb" src="https://images.unsplash.com/photo-1578874691223-a49262e0c94f?w=900&auto=format&fit=crop&q=80" alt="Peninjauan Infrastruktur Mandalika">
               <figcaption class="image-caption">Suasana peninjauan akses bypass Mandalika oleh rombongan Gubernur NTB bersama dinas terkait. (Foto: Dok. Diskominfotik NTB)</figcaption>
             </figure>
@@ -175,42 +185,100 @@
               </div>
             </div>
 
-            <!-- Tombol Share -->
+            <!-- Tombol Share (ikon kotak berwarna, berderet di kiri sejajar "BAGIKAN") -->
             <div class="share-buttons-row">
               <span class="share-label">BAGIKAN:</span>
-              <a href="https://api.whatsapp.com/send?text=Gubernur%20NTB%20Tinjau%20Kesiapan%20Infrastruktur" target="_blank" rel="noopener" class="btn-share wa">
-                WhatsApp
-              </a>
-              <a href="https://facebook.com/sharer/sharer.php" target="_blank" rel="noopener" class="btn-share fb">
-                Facebook
-              </a>
-              <a href="https://twitter.com/intent/tweet" target="_blank" rel="noopener" class="btn-share tw">
-                Twitter / X
-              </a>
+              <div class="share-icons-group">
+                <!-- Facebook: kotak biru, ikon putih -->
+                <a href="https://facebook.com/sharer/sharer.php" target="_blank" rel="noopener" class="btn-share-square fb" aria-label="Facebook" title="Bagikan ke Facebook">
+                  <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                </a>
+                <!-- WhatsApp: kotak hijau, ikon putih -->
+                <a href="https://api.whatsapp.com/send?text=Gubernur%20NTB%20Tinjau%20Kesiapan%20Infrastruktur" target="_blank" rel="noopener" class="btn-share-square wa" aria-label="WhatsApp" title="Bagikan ke WhatsApp">
+                  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.979-.277-.1-.478-.15-.68.15-.2.3-.777.98-.953 1.18-.176.2-.352.226-.653.075-1.928-.962-3.189-1.716-4.457-3.896-.334-.575.334-.533.957-1.776.1-.2.05-.376-.025-.526-.075-.15-.68-1.637-.93-2.242-.244-.589-.492-.509-.676-.518l-.577-.01c-.2 0-.526.075-.802.376-.276.301-1.053 1.028-1.053 2.508 0 1.48 1.078 2.909 1.229 3.109.15.2 2.122 3.24 5.141 4.544 2.245.968 3.104.975 4.223.809.684-.102 1.78-.727 2.031-1.43.25-.702.25-1.304.175-1.43-.075-.125-.276-.2-.577-.35zM12.04 2C6.495 2 2 6.495 2 12.04c0 1.97.57 3.81 1.56 5.36L2.1 22l4.74-1.45a10.02 10.02 0 0 0 5.2 1.49c5.545 0 10.04-4.495 10.04-10.04C22.08 6.495 17.585 2 12.04 2z"/></svg>
+                </a>
+                <!-- Print: kotak #4b4b4b, ikon print putih -->
+                <button type="button" class="btn-share-square print" id="btnPrintShare" aria-label="Print" title="Cetak halaman">
+                  <svg viewBox="0 0 24 24"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8" rx="1"/></svg>
+                </button>
+                <!-- Link: kotak hitam, ikon putih -->
+                <button type="button" class="btn-share-square link" id="btnCopyLink" aria-label="Salin tautan" title="Salin tautan">
+                  <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                </button>
+              </div>
             </div>
 
             <!-- Bagian Komentar Pembaca -->
             <section class="article-comments-section" style="margin-top: 24px;">
               <div class="section-header">
-                <h3 class="section-title">Komentar Pembaca (1)</h3>
-              </div>
-              <div class="comment-card-list">
-                <div class="comment-card">
-                  <div class="comment-avatar">H</div>
-                  <div class="comment-body">
-                    <span class="comment-author">Hendra Wijaya</span>
-                    <span style="font-size: 10px; color: var(--color-header-meta); display: block; margin-bottom: 4px;">31 Agustus 2026, 15:10 WITA</span>
-                    <p class="comment-text">"Semoga jalan bypass dan penerangan lampu selesai tepat waktu, sangat membantu warga sekitar!"</p>
-                  </div>
-                </div>
+                <h3 class="section-title">Komentar Pembaca (<span id="readerCommentsCount">1</span>)</h3>
               </div>
 
-              <!-- Form Tambah Komentar -->
-              <form class="comment-form-box" onsubmit="event.preventDefault(); alert('Terima kasih! Komentar Anda berhasil dikirim dan menunggu moderasi.'); this.reset();">
-                <label for="commentInput" style="font-size: 12px; font-weight: 600; display: block; margin-bottom: 6px;">Tinggalkan Komentar</label>
-                <textarea id="commentInput" class="comment-input" rows="3" placeholder="Tulis komentar atau tanggapan Anda di sini..." required></textarea>
-                <button type="submit" class="btn-submit-comment">Kirim Komentar</button>
-              </form>
+              <div class="comment-thumb-list" id="readerCommentsList">
+                <article class="comment-thumb-card">
+                  <div class="comment-thumb-top">
+                    <img class="comment-profile-avatar" src="images/google_avatar.svg" alt="Profil Hendra Wijaya">
+                    <div class="comment-thumb-header">
+                      <span class="comment-thumb-name">Hendra Wijaya</span>
+                      <span class="comment-thumb-time">31 Agustus 2026, 15:10 WITA</span>
+                    </div>
+                  </div>
+                  <div class="comment-thumb-divider"></div>
+                  <div class="comment-thumb-bottom">
+                    Semoga jalan bypass dan penerangan lampu selesai tepat waktu, sangat membantu warga sekitar!
+                  </div>
+                </article>
+              </div>
+
+              <!-- Kotak Komentar -->
+              <div class="comment-form-box" id="commentFormBox">
+                <label class="comment-form-label">Tinggalkan Komentar</label>
+
+                <!-- Kondisi setelah login: profil kotak + nama + logout merah (di atas kolom komentar, tanpa frame) -->
+                <div class="comment-user-bar" id="commentUserBar" style="display: none;">
+                  <img id="authUserAvatar" class="comment-user-avatar-square" src="images/google_avatar.svg" alt="Profil Google">
+                  <span id="authUserName" class="comment-user-name-text">Pengguna Google</span>
+                  <button type="button" id="btnGoogleLogout" class="btn-logout-red" title="Keluar dari akun Google" aria-label="Keluar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                      <polyline points="16 17 21 12 16 7"></polyline>
+                      <line x1="21" y1="12" x2="9" y2="12"></line>
+                    </svg>
+                  </button>
+                </div>
+
+                <!-- Peringatan komentar kosong (ikon warning di sebelah kiri tulisan) -->
+                <div id="commentWarningAlert" class="comment-warning-alert">
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                    <line x1="12" y1="9" x2="12" y2="13"></line>
+                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                  </svg>
+                  <span>Anda belum menuliskan komentar!</span>
+                </div>
+
+                <textarea id="commentInput" class="comment-input" rows="3" placeholder="Tulis komentar atau tanggapan Anda di sini..."></textarea>
+
+                <!-- Tombol Sign in (kondisi awal) dengan dropdown Google -->
+                <div class="comment-submit-wrap">
+                  <button type="button" id="btnSignIn" class="btn-signin-comment">Sign in</button>
+
+                  <div class="signin-dropdown" id="signinDropdown" style="display: none;">
+                    <button type="button" id="btnGoogleLogin" class="signin-dropdown-item">
+                      <svg viewBox="0 0 24 24">
+                        <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                        <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                        <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                        <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+                      </svg>
+                      Masuk dengan akun Google
+                    </button>
+                  </div>
+
+                  <!-- Kondisi setelah login: tombol kirim -->
+                  <button type="button" id="btnSubmitCommentAction" class="btn-submit-comment" style="display: none;">Kirim Komentar</button>
+                </div>
+              </div>
             </section>
 
           </article>
@@ -539,7 +607,7 @@
           <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .58.04.85.12V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.3 6.3 0 0 0 1.94-4.48V8.78a8.16 8.16 0 0 0 4.83 1.57V6.9a4.85 4.85 0 0 1-1-.21z"/></svg>
         </a>
         <a href="https://instagram.com" target="_blank" rel="noopener" class="social-circle" aria-label="Instagram">
-          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none" stroke="currentColor" stroke-width="2"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="fill:none;"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
         </a>
         <a href="https://youtube.com" target="_blank" rel="noopener" class="social-circle" aria-label="YouTube">
           <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="var(--color-surface)"/></svg>
@@ -578,42 +646,369 @@
       document.getElementById('pageTitle').textContent = `${art.title} — SuaraNTB`;
       document.getElementById('breadcrumbCategory').textContent = art.category.toUpperCase();
       document.getElementById('breadcrumbCategory').href = `kategori.html?slug=${encodeURIComponent(art.category.toLowerCase())}`;
-      
-      const badge = document.getElementById('detailBadge');
-      badge.textContent = art.category;
-      badge.className = `badge ${art.badgeClass}`;
 
       document.getElementById('detailTitle').textContent = art.title;
-      document.getElementById('detailAuthor').textContent = `Oleh: ${art.author}`;
-      document.getElementById('detailDate').textContent = `${art.date}, ${art.time}`;
+      // Info bar: penerbit | tanggal | kategori
+      document.getElementById('detailAuthor').textContent = art.author || 'Redaksi SuaraNTB';
+      document.getElementById('detailDate').textContent = art.date || '31 Agustus 2026'; // tanggal saja (tanpa jam)
+      document.getElementById('detailBadge').textContent = art.category || 'Umum';
       document.getElementById('detailThumb').src = art.thumb;
 
+      // Tags: hanya kategori + topik artikel
       const tagsContainer = document.getElementById('detailTags');
-      if (tagsContainer && art.tags) {
-        tagsContainer.innerHTML = art.tags.map(t => `
+      if (tagsContainer) {
+        const tagList = [];
+        const addTag = (t) => {
+          if (t && !tagList.some(x => x.toLowerCase() === String(t).toLowerCase())) tagList.push(t);
+        };
+        addTag(art.category);
+        (art.tags || []).forEach(addTag);
+        tagsContainer.innerHTML = tagList.map(t => `
           <a href="pencarian.html?q=${encodeURIComponent(t)}" class="article-tag-link"># ${t}</a>
         `).join('');
       }
 
+      // ===== Isi artikel: maks 60 baris/halaman + Baca Juga + paginasi =====
       const contentBox = document.getElementById('detailContent');
-      if (contentBox && art.content) {
-        // preserve "Baca Juga" box inside article
-        contentBox.innerHTML = `
-          ${art.content}
-          <aside class="baca-juga-box">
-            <div class="baca-juga-title">Baca Juga:</div>
-            <div class="related-list">
+      const paginationBox = document.querySelector('.article-pagination');
+
+      const CHARS_PER_LINE = 95;
+      const MAX_LINES = 60;
+      const MAX_CHARS = CHARS_PER_LINE * MAX_LINES; // anggaran karakter per halaman (~60 baris)
+      const stripTags = (h) => h.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+      const textLen = (h) => stripTags(h).length;
+
+      // Paragraf pembuka dari data artikel
+      const introParas = ((art.content || '').match(/<p[\s\S]*?<\/p>/g) || []).filter(Boolean);
+      if (introParas.length === 0) introParas.push(`<p>${art.excerpt || art.title}</p>`);
+
+      // Paragraf lanjutan
+      const lanjutan = [
+        `<p>Kegiatan ini menjadi bagian dari rangkaian program prioritas pemerintah daerah yang menitikberatkan pada pemerataan pembangunan dan peningkatan kualitas pelayanan publik bagi seluruh lapisan masyarakat di Nusa Tenggara Barat.</p>`,
+        `<p>Sejumlah tokoh masyarakat menyambut baik langkah tersebut. Menurut mereka, kolaborasi antara pemerintah, swasta, dan masyarakat menjadi kunci utama agar setiap program dapat berjalan tepat sasaran dan berkelanjutan.</p>`,
+        `<p>"Kami berharap apa yang menjadi kebutuhan dasar warga dapat segera terpenuhi. Yang terpenting adalah transparansi dan komunikasi yang baik antara pemerintah dengan masyarakat," ujar salah satu perwakilan warga.</p>`,
+        `<p>Dari sisi anggaran, pemerintah memastikan alokasi dana telah disiapkan melalui mekanisme yang akuntabel. Pengawasan dilakukan secara berlapis, mulai dari tingkat desa hingga provinsi, guna mencegah potensi penyimpangan.</p>`,
+        `<p>Selain itu, pemanfaatan teknologi digital terus didorong untuk mempercepat proses pelayanan. Masyarakat kini dapat mengakses informasi dan mengajukan layanan secara daring tanpa harus datang ke kantor.</p>`,
+        `<p>Pengamat kebijakan publik menilai pendekatan ini relevan dengan kebutuhan zaman. Efisiensi birokrasi dan keterbukaan data dinilai mampu meningkatkan kepercayaan publik terhadap institusi pemerintah.</p>`,
+        `<p>Di sisi lain, tantangan geografis NTB yang terdiri atas pulau-pulau tetap menjadi perhatian. Distribusi logistik dan pemerataan infrastruktur memerlukan perencanaan matang serta dukungan sarana transportasi yang memadai.</p>`,
+        `<p>Pemerintah daerah berkomitmen memperkuat koordinasi lintas sektor, termasuk dengan instansi vertikal dan pemerintah kabupaten/kota, agar setiap kebijakan dapat diimplementasikan secara sinergis di lapangan.</p>`,
+        `<p>Partisipasi generasi muda juga menjadi sorotan. Berbagai komunitas dan organisasi kepemudaan diajak terlibat aktif dalam pengawasan pembangunan serta kampanye positif di ruang digital.</p>`,
+        `<p>Ke depan, evaluasi berkala akan dilakukan untuk mengukur capaian indikator kinerja. Hasil evaluasi menjadi dasar perbaikan kebijakan agar program yang dijalankan semakin efektif dan bermanfaat.</p>`,
+        `<p>Masyarakat diimbau turut menjaga fasilitas yang telah dibangun serta melaporkan setiap kendala melalui saluran pengaduan resmi yang telah disediakan oleh pemerintah.</p>`,
+        `<p>Dengan sinergi yang kuat antara semua pihak, diharapkan pembangunan di Nusa Tenggara Barat dapat berjalan lebih cepat, merata, dan berdampak nyata bagi kesejahteraan masyarakat.</p>`,
+        `<p>Sejumlah program pendampingan juga disiapkan bagi pelaku usaha mikro, kecil, dan menengah agar mampu beradaptasi dengan perubahan pasar serta memanfaatkan peluang ekonomi digital yang terus berkembang pesat.</p>`,
+        `<p>Pemerintah menegaskan komitmennya untuk terus mendengarkan aspirasi masyarakat melalui forum-forum dialog yang melibatkan berbagai pemangku kepentingan, sehingga kebijakan yang diambil benar-benar sesuai kebutuhan di lapangan.</p>`,
+        `<p>Dukungan infrastruktur dasar seperti jalan, air bersih, dan penerangan dinilai menjadi fondasi penting dalam mendorong pertumbuhan ekonomi daerah serta meningkatkan indeks pembangunan manusia di wilayah tersebut.</p>`,
+        `<p>Ke depan, pemerintah daerah akan memperkuat sistem pemantauan berbasis data agar setiap program dapat dievaluasi secara objektif dan berkelanjutan, sekaligus menjadi bahan perbaikan pada periode berikutnya.</p>`,
+        `<p>Sejumlah sekolah dan lembaga pendidikan juga dilibatkan dalam program edukasi publik, agar masyarakat semakin memahami pentingnya partisipasi aktif dalam setiap tahapan pembangunan daerah.</p>`,
+        `<p>Pelaku industri kreatif di NTB dinilai memiliki potensi besar untuk terus dikembangkan, terutama dengan dukungan promosi digital dan kemudahan akses pembiayaan bagi usaha rintisan.</p>`,
+        `<p>Pemerintah mengajak seluruh elemen masyarakat untuk menjaga kondusivitas dan kerukunan, karena stabilitas sosial merupakan prasyarat utama bagi kelancaran pembangunan dan pertumbuhan ekonomi.</p>`,
+        `<p>Dalam jangka panjang, penguatan sumber daya manusia melalui pendidikan dan pelatihan keterampilan menjadi prioritas agar generasi muda NTB mampu bersaing di tingkat nasional maupun global.</p>`,
+        `<p>Berbagai capaian yang telah diraih diharapkan menjadi pijakan untuk terus berinovasi, sehingga pelayanan kepada masyarakat semakin cepat, mudah, dan transparan dari waktu ke waktu.</p>`,
+        `<p>Koordinasi antara pemerintah provinsi dan kabupaten/kota akan terus ditingkatkan, termasuk dalam penyusunan rencana kerja yang terintegrasi agar tidak terjadi tumpang tindih program di lapangan.</p>`,
+        `<p>Dengan komitmen bersama dan pengawasan yang berkelanjutan, program-program pembangunan diharapkan memberikan manfaat yang sebesar-besarnya bagi seluruh masyarakat Nusa Tenggara Barat.</p>`,
+        `<p>Pemerintah daerah juga mendorong penguatan peran Badan Usaha Milik Desa sebagai motor penggerak ekonomi lokal, agar hasil pembangunan dapat dirasakan langsung hingga tingkat desa.</p>`,
+        `<p>Berbagai pelatihan keterampilan bagi warga terus digelar, mulai dari bidang pertanian, perikanan, hingga pemasaran digital, guna meningkatkan daya saing sumber daya manusia di daerah.</p>`,
+        `<p>Penguatan sektor pariwisata berbasis masyarakat menjadi salah satu strategi utama, dengan melibatkan warga setempat sebagai pengelola destinasi, pemandu, dan penyedia akomodasi.</p>`,
+        `<p>Kualitas layanan publik terus dievaluasi melalui survei kepuasan masyarakat, sehingga perbaikan dapat dilakukan secara cepat dan tepat sesuai kebutuhan pengguna layanan.</p>`,
+        `<p>Pemerintah berkomitmen menjaga kelestarian lingkungan dalam setiap tahap pembangunan, termasuk memastikan analisis dampak lingkungan diterapkan secara disiplin di lapangan.</p>`,
+        `<p>Kerja sama dengan perguruan tinggi dan lembaga riset juga diperkuat, agar kebijakan pembangunan berbasis pada data dan kajian ilmiah yang dapat dipertanggungjawabkan.</p>`,
+        `<p>Masyarakat diharapkan terus berperan aktif memberikan masukan, karena partisipasi publik merupakan kunci agar pembangunan benar-benar sesuai dengan kebutuhan nyata di lapangan.</p>`,
+        `<p>Melalui pendekatan yang terencana, terukur, dan inklusif, pembangunan di Nusa Tenggara Barat diharapkan terus berjalan berkelanjutan dari satu periode ke periode berikutnya.</p>`,
+        `<p>Seluruh pemangku kepentingan diajak untuk menjaga semangat gotong royong, karena keberhasilan pembangunan daerah merupakan hasil kerja bersama antara pemerintah dan masyarakat.</p>`,
+        `<p>Dengan demikian, berbagai program yang telah dan akan dijalankan diharapkan mampu mendorong kemajuan yang merata serta meningkatkan kualitas hidup seluruh warga Nusa Tenggara Barat.</p>`,
+        `<p>Pemerintah mengajak seluruh pihak untuk terus mengawal setiap proses pembangunan, sehingga transparansi dan akuntabilitas dapat terjaga dengan baik pada setiap tahapannya.</p>`,
+        `<p>Ke depan, penguatan tata kelola pemerintahan yang bersih dan melayani menjadi fondasi penting dalam mewujudkan visi pembangunan daerah yang berkelanjutan dan berkeadilan.</p>`,
+        `<p>Semua pihak berharap agar sinergi yang telah terbangun dapat terus dipelihara, sehingga cita-cita menjadikan Nusa Tenggara Barat yang maju dan sejahtera dapat segera terwujud.</p>`,
+        `<p>Demikian laporan ini disusun sebagai bahan informasi bagi masyarakat, sekaligus menjadi acuan bersama dalam mengawal jalannya pembangunan di daerah.</p>`,
+        `<p>Redaksi mengajak pembaca untuk terus mengikuti perkembangan berita terkini seputar pembangunan dan kebijakan daerah melalui kanal resmi SuaraNTB.</p>`
+      ];
+
+      // Kotak "Baca Juga" berisi 2 tautan
+      const bacaJugaBox = (items) => `
+        <aside class="baca-juga-box">
+          <div class="baca-juga-title">Baca Juga:</div>
+          <div class="related-list">
+            ${items.map(it => `
               <div class="related-item">
-                <a href="isi-berita.html?id=6" class="related-link">Harga Cabai Rawit di Pasar Tradisional Mataram Mulai Berangsur Turun</a>
-              </div>
-              <div class="related-item">
-                <a href="isi-berita.html?id=5" class="related-link">Festival Pesona Senggigi Kembali Digelar, Angkat Seni Tradisi Sasak</a>
+                <a href="isi-berita.html?id=${it.id}" class="related-link">${it.title}</a>
+              </div>`).join('')}
+          </div>
+        </aside>`;
+
+      const bacaJugaSet1 = [
+        { id: 6, title: 'Harga Cabai Rawit di Pasar Tradisional Mataram Mulai Berangsur Turun' },
+        { id: 5, title: 'Festival Pesona Senggigi Kembali Digelar, Angkat Seni Tradisi Sasak' }
+      ];
+      const bacaJugaSet2 = [
+        { id: 4, title: 'Inovasi SMK di Lombok Timur Ciptakan Motor Listrik Bertenaga Surya' },
+        { id: 3, title: 'DPRD NTB Sahkan Raperda Perlindungan Lahan Pertanian Berkelanjutan' }
+      ];
+
+      // Gabungkan paragraf: pembuka + lanjutan
+      const allParas = [...introParas, ...lanjutan];
+
+      // Susun blok; sisipkan "Baca Juga" setelah 3 paragraf, lalu 3 paragraf setelahnya
+      const blocks = [];
+      allParas.forEach((p, i) => {
+        blocks.push(p);
+        if (i === 2) blocks.push(bacaJugaBox(bacaJugaSet1)); // setelah 3 paragraf
+        if (i === 5) blocks.push(bacaJugaBox(bacaJugaSet2)); // 3 paragraf setelah tautan pertama
+      });
+
+      // Paginasi berdasarkan anggaran karakter (maks ~60 baris/halaman)
+      const pages = [];
+      let cur = [], curChars = 0;
+      blocks.forEach((b) => {
+        const len = textLen(b);
+        if (cur.length > 0 && curChars + len > MAX_CHARS) {
+          pages.push(cur.join('\n'));
+          cur = []; curChars = 0;
+        }
+        cur.push(b); curChars += len;
+      });
+      if (cur.length) pages.push(cur.join('\n'));
+
+      function renderArticlePage(idx) {
+        if (!contentBox) return;
+        contentBox.innerHTML = pages[idx];
+        if (!paginationBox) return;
+
+        // Jika isi <= 60 baris (hanya 1 halaman), sembunyikan informasi halaman
+        if (pages.length <= 1) {
+          paginationBox.style.display = 'none';
+          paginationBox.innerHTML = '';
+          return;
+        }
+
+        paginationBox.style.display = 'flex';
+        let html = '';
+        for (let i = 0; i < pages.length; i++) {
+          html += `<button type="button" class="page-num-btn ${i === idx ? 'active' : ''}" data-page="${i}">${i + 1}</button>`;
+        }
+        if (idx < pages.length - 1) {
+          html += `<button type="button" class="page-num-btn" id="btnNextPage" style="width:auto;padding:0 12px;">Selanjutnya →</button>`;
+        } else {
+          html += `<button type="button" class="page-num-btn" id="btnPrevPage" style="width:auto;padding:0 12px;">← Sebelumnya</button>`;
+        }
+        paginationBox.innerHTML = html;
+
+        paginationBox.querySelectorAll('[data-page]').forEach(b => {
+          b.addEventListener('click', () => {
+            renderArticlePage(parseInt(b.getAttribute('data-page'), 10));
+            contentBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          });
+        });
+        const next = document.getElementById('btnNextPage');
+        if (next) next.addEventListener('click', () => {
+          renderArticlePage(idx + 1);
+          contentBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+        const prev = document.getElementById('btnPrevPage');
+        if (prev) prev.addEventListener('click', () => {
+          renderArticlePage(idx - 1);
+          contentBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      }
+
+      renderArticlePage(0);
+
+      // Tombol print & salin tautan
+      const btnPrint = document.getElementById('btnPrintShare');
+      if (btnPrint) btnPrint.addEventListener('click', () => window.print());
+
+      const btnCopy = document.getElementById('btnCopyLink');
+      if (btnCopy) btnCopy.addEventListener('click', () => {
+        const url = window.location.href;
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(url)
+            .then(() => alert('Tautan berita berhasil disalin!'))
+            .catch(() => prompt('Salin tautan berita:', url));
+        } else {
+          prompt('Salin tautan berita:', url);
+        }
+      });
+    })();
+
+    // ===== Sistem Komentar Pembaca (Profil Google) =====
+    (function() {
+      let currentUser = JSON.parse(localStorage.getItem('google_user') || 'null');
+
+      const userBar = document.getElementById('commentUserBar');
+      const userAvatar = document.getElementById('authUserAvatar');
+      const userName = document.getElementById('authUserName');
+      const btnSignIn = document.getElementById('btnSignIn');
+      const signinDropdown = document.getElementById('signinDropdown');
+      const btnLogin = document.getElementById('btnGoogleLogin');
+      const btnLogout = document.getElementById('btnGoogleLogout');
+      const btnSubmit = document.getElementById('btnSubmitCommentAction');
+      const commentInput = document.getElementById('commentInput');
+      const warningAlert = document.getElementById('commentWarningAlert');
+      const readerList = document.getElementById('readerCommentsList');
+      const readerCount = document.getElementById('readerCommentsCount');
+
+      if (!readerList || !btnSubmit) return;
+
+      const defaultComments = [{
+        id: 'default-1',
+        author: 'Hendra Wijaya',
+        avatar: 'images/google_avatar.svg',
+        time: '31 Agustus 2026, 15:10 WITA',
+        text: 'Semoga jalan bypass dan penerangan lampu selesai tepat waktu, sangat membantu warga sekitar!',
+        isOwner: false
+      }];
+
+      let storedComments = JSON.parse(localStorage.getItem('user_comments_db') || '[]');
+
+      function closeDropdown() {
+        if (signinDropdown) signinDropdown.style.display = 'none';
+      }
+
+      function updateAuthUI() {
+        if (currentUser) {
+          // Kondisi setelah login
+          userBar.style.display = 'flex';
+          btnSignIn.style.display = 'none';
+          btnSubmit.style.display = 'inline-flex';
+          closeDropdown();
+          userAvatar.src = currentUser.avatar || 'images/google_avatar.svg';
+          userName.textContent = currentUser.name;
+        } else {
+          // Kondisi awal (sebelum login)
+          userBar.style.display = 'none';
+          btnSignIn.style.display = 'inline-flex';
+          btnSubmit.style.display = 'none';
+          closeDropdown();
+        }
+      }
+
+      function simulateLogin() {
+        const users = [
+          { name: 'Muhammad Zaidan', avatar: 'images/google_avatar.svg', email: 'zaidan@gmail.com' },
+          { name: 'Baiq Safira', avatar: 'images/google_avatar.svg', email: 'safira@gmail.com' },
+          { name: 'Lalu Arya Pratama', avatar: 'images/google_avatar.svg', email: 'arya@gmail.com' }
+        ];
+        currentUser = users[Math.floor(Math.random() * users.length)];
+        localStorage.setItem('google_user', JSON.stringify(currentUser));
+        updateAuthUI();
+      }
+
+      function logout() {
+        currentUser = null;
+        localStorage.removeItem('google_user');
+        updateAuthUI();
+        renderComments();
+      }
+
+      function renderComments() {
+        const list = [
+          ...defaultComments,
+          ...storedComments.map(c => ({ ...c, isOwner: !!(currentUser && currentUser.email === c.userEmail) }))
+        ];
+        if (readerCount) readerCount.textContent = list.length;
+
+        readerList.innerHTML = list.map(c => `
+          <article class="comment-thumb-card" id="comment-${c.id}">
+            <div class="comment-thumb-top">
+              <img class="comment-profile-avatar" src="${c.avatar || 'images/google_avatar.svg'}" alt="Profil ${escapeHTML(c.author)}">
+              <div class="comment-thumb-header">
+                <span class="comment-thumb-name">${escapeHTML(c.author)}</span>
+                <span class="comment-thumb-time">${escapeHTML(c.time)}</span>
               </div>
             </div>
-          </aside>
-          <p>Masyarakat NTB berharap keberadaan sarana dan prasarana ini dapat memacu kebangkitan ekonomi sektor riil dan kesejahteraan masyarakat secara luas.</p>
-        `;
+            <div class="comment-thumb-divider"></div>
+            <div class="comment-thumb-bottom">
+              ${escapeHTML(c.text)}
+              ${c.isOwner ? `
+                <div class="comment-user-actions">
+                  <button type="button" class="btn-comment-action" data-edit="${c.id}">Edit</button>
+                  <span>•</span>
+                  <button type="button" class="btn-comment-action delete" data-delete="${c.id}">Hapus</button>
+                </div>` : ''}
+            </div>
+          </article>
+        `).join('');
+
+        readerList.querySelectorAll('[data-delete]').forEach(b => b.addEventListener('click', () => deleteComment(b.getAttribute('data-delete'))));
+        readerList.querySelectorAll('[data-edit]').forEach(b => b.addEventListener('click', () => editComment(b.getAttribute('data-edit'))));
       }
+
+      function deleteComment(id) {
+        if (!confirm('Hapus komentar ini?')) return;
+        storedComments = storedComments.filter(c => c.id !== id);
+        localStorage.setItem('user_comments_db', JSON.stringify(storedComments));
+        renderComments();
+      }
+
+      function editComment(id) {
+        const item = storedComments.find(c => c.id === id);
+        if (!item) return;
+        const val = prompt('Ubah komentar:', item.text);
+        if (val !== null && val.trim() !== '') {
+          item.text = val.trim();
+          localStorage.setItem('user_comments_db', JSON.stringify(storedComments));
+          renderComments();
+        }
+      }
+
+      function nowString() {
+        const bulan = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+        const d = new Date();
+        return `${d.getDate()} ${bulan[d.getMonth()]} ${d.getFullYear()}, ${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')} WITA`;
+      }
+
+      // Tombol Sign in membuka dropdown pilihan masuk dengan akun Google
+      if (btnSignIn) {
+        btnSignIn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const isOpen = signinDropdown.style.display === 'block';
+          signinDropdown.style.display = isOpen ? 'none' : 'block';
+        });
+      }
+
+      if (btnLogin) {
+        btnLogin.addEventListener('click', (e) => {
+          e.stopPropagation();
+          simulateLogin();
+        });
+      }
+
+      // Tutup dropdown saat klik di luar
+      document.addEventListener('click', (e) => {
+        if (signinDropdown && !e.target.closest('.comment-submit-wrap')) {
+          closeDropdown();
+        }
+      });
+
+      btnLogout.addEventListener('click', logout);
+
+      btnSubmit.addEventListener('click', () => {
+        const text = commentInput.value.trim();
+        if (!text) {
+          warningAlert.classList.add('is-visible');
+          return;
+        }
+        warningAlert.classList.remove('is-visible');
+        const user = currentUser || { name: 'Tamu', avatar: 'images/google_avatar.svg', email: 'guest' };
+        storedComments.push({
+          id: 'c_' + Date.now(),
+          author: user.name,
+          avatar: user.avatar || 'images/google_avatar.svg',
+          userEmail: user.email,
+          time: nowString(),
+          text: text
+        });
+        localStorage.setItem('user_comments_db', JSON.stringify(storedComments));
+        commentInput.value = '';
+        renderComments();
+      });
+
+      commentInput.addEventListener('input', () => {
+        if (commentInput.value.trim() && warningAlert) warningAlert.classList.remove('is-visible');
+      });
+
+      updateAuthUI();
+      renderComments();
     })();
   </script>
 </body>
