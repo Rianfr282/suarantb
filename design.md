@@ -207,6 +207,34 @@ Label seksi (`BERITA TERBARU`, `BERITA POPULER`, `KOMENTAR DI BERITA LAINNYA`, d
 
 Full-width, background hitam/`--color-text`, teks putih, Bold, border-radius `var(--radius-button)`, ikon panah bawah di kanan teks. Dipakai di halaman Kategori untuk memuat lebih banyak artikel (bisa diimplementasikan dengan JS `fetch`/`slice` array data statis, atau cukup toggle elemen tersembunyi untuk keperluan prototipe skripsi).
 
+### 4.11 Kartu Info Kontak (halaman Kontak Kami)
+
+Ikon di dalam lingkaran (background biru muda tint, mis. `#BFE3F0`), ukuran ikon ±28-32px, warna ikon senada `--color-primary`/dark. Di bawah ikon: heading Bold ±18-20px, lalu isi teks/list Regular ±14px. Card background `--color-surface`, border-radius `var(--radius-card)`, padding lebih besar dari kartu artikel (±20-24px).
+
+Dua varian isi:
+- **Varian alamat**: ikon pin lokasi, heading "Alamat Redaksi", teks alamat, link "LIHAT PETA →" (arahkan ke URL Google Maps).
+- **Varian kontak**: ikon telepon, heading "Kontak Redaksi", bullet list dengan label bergaris bawah (Telepon, WhatsApp, Email) diikuti nilainya.
+
+### 4.12 Form Kontak
+
+Card terpisah, heading "Kontak Redaksi" (Bold besar), field berurutan vertikal:
+- Label uppercase kecil Bold di atas tiap input (mis. "NAMA LENGKAP").
+- Input/textarea: background abu muda (estimasi `#F0EFEA`) dengan border tipis, border-radius `var(--radius-button)`, padding ±14px, placeholder warna `--color-text` opacity soft.
+- Field: Nama Lengkap (text, placeholder "Nama Anda"), Alamat Email (email, placeholder "email@contoh.com"), Subjek (text, placeholder "Judul Pesan..."), Pesan (textarea, tinggi ±120px, placeholder "Tulis pesan anda di sini...").
+- Tombol submit **"Kirim Pesan"**: full-width, background hitam/`--color-text`, teks putih Bold, ikon paper-plane di kiri teks, border-radius `var(--radius-button)`.
+- Untuk kebutuhan skripsi, submit tidak perlu backend nyata — cukup `event.preventDefault()` + tampilkan pesan konfirmasi sederhana, atau integrasikan ke layanan form statis (mis. Formspree) bila ingin benar-benar fungsional.
+
+### 4.13 Halaman Teks Panjang (Long-form Content)
+
+Dipakai di halaman **Redaksi** & **Pedoman Media Siber** — tanpa kartu/gambar seperti Isi Berita, cukup konten teks terstruktur:
+- Judul halaman: Bold besar (±24-28px).
+- Paragraf: Regular, `line-height` ±1.6 untuk keterbacaan teks panjang.
+- Sub-heading (mis. "1. Ruang Lingkup", "Pendiri:"): Bold, sedikit lebih besar dari body text, margin-top lebih besar dari paragraf biasa.
+- Sub-list berhuruf (a, b, c...) di dalam sub-heading bernomor: indentasi menjorok, tetap Regular.
+- Bullet list biasa (mis. daftar nama staf per jabatan): `<ul><li>` standar; label sebelum titik dua di-bold jika ada (mis. "Alamat:").
+- Kata/istilah bergaris bawah tanpa jadi link sungguhan (mis. "Telepon", "WhatsApp", "Email" pada halaman Redaksi) cukup `text-decoration: underline`, warna tetap `--color-text` (bukan warna link/primary).
+- Halaman ini **tidak** memiliki: gambar utama, related articles, comment section, pagination. Struktur hanya: Header → breadcrumb → judul → konten teks panjang → Footer.
+
 ## 5. Struktur Halaman
 
 | Halaman | File (usulan) | Breadcrumb |
@@ -217,6 +245,9 @@ Full-width, background hitam/`--color-text`, teks putih, Bold, border-radius `va
 | Kategori (mis. Ekonomi) | `kategori.html?slug=ekonomi` atau `kategori-ekonomi.html` | `BERANDA > [KATEGORI]` |
 | Submenu NTB per wilayah | pakai template sama seperti Kategori, judul & data berbeda | `BERANDA > NTB > [WILAYAH]` |
 | Pencarian | `pencarian.html` | `BERANDA > PENCARIAN` |
+| Redaksi | `redaksi.html` | `BERANDA > REDAKSI` |
+| Pedoman Media Siber | `pedoman-media-siber.html` | `BERANDA > PEDOMAN MEDIA SIBER` |
+| Kontak Kami | `kontak-kami.html` | `BERANDA > KONTAK KAMI` |
 
 ### 5.1 Beranda
 Header → carousel banner iklan (dots indicator) → seksi "Berita Terbaru" (list kartu, 4.3) → seksi "Berita Populer" (list bernomor 1–5) → seksi "Komentar di Berita Lainnya" (4.8) → beberapa seksi kategori tambahan (Politik, Kriminal, dst masing-masing dengan bar judul + kartu) → Footer.
@@ -235,6 +266,19 @@ Sama persis dengan struktur 5.4 (Kategori), hanya judul dan sumber data yang ber
 
 ### 5.6 Halaman Hasil Pencarian
 Header (search bar sudah terisi kata kunci) → breadcrumb → judul `"Hasil pencarian: [kata kunci]"` → list hasil (format 4.4) → tombol "Tampilkan lebih banyak hasil" → Footer.
+
+### 5.7 Redaksi
+Header → breadcrumb (`BERANDA > REDAKSI`) → judul "Perkenalkan, SUARANTB.com" (kata "SUARANTB.com" ditandai warna berbeda/style link, teks lain default) → 5 paragraf deskripsi → info kontak singkat (Alamat, Telepon, WhatsApp, Email — bullet list, label bold) → daftar susunan redaksi per jabatan, masing-masing sub-heading underline bold diikuti bullet nama: Pendiri, Pemimpin Umum, Penanggung Jawab/Pemimpin Redaksi, Redaktur, Staf Redaksi (dikelompokkan per wilayah: Mataram, Lombok Barat, Lombok Tengah, Lombok Timur, Lombok Utara, Sumbawa, Sumbawa Barat, Dompu, Bima/Kota Bima), Video Jurnalis, Staff IT, Admin Web dan Media Sosial, Staff Marketing dan Iklan, Keuangan → Footer.
+Gunakan komponen 4.13 (Halaman Teks Panjang).
+
+### 5.8 Pedoman Media Siber
+Header → breadcrumb (`BERANDA > PEDOMAN MEDIA SIBER`) → judul "Pedoman Media Siber" → 2 paragraf pembuka → 9 seksi bernomor (1. Ruang Lingkup, 2. Verifikasi dan Keberimbangan Berita, 3. Isi Buatan Pengguna/User Generated Content, 4. Ralat, Koreksi, dan Hak Jawab, 5. Pencabutan Berita, 6. Iklan, 7. Hak Cipta, 8. Pencantuman Pedoman, 9. Sengketa) — sebagian seksi berisi sub-poin berhuruf (a, b, c, ...) — → penutup baris tanggal/tempat ("Jakarta, 3 Februari 2012" + keterangan penyusun) → Footer.
+Gunakan komponen 4.13. Konten teks lengkap tiap seksi mengikuti isi pada screenshot yang sudah diberikan pengguna.
+
+### 5.9 Kontak Kami
+Header → breadcrumb (`BERANDA > KONTAK KAMI`) → judul "Kontak Kami" + subjudul singkat ("Kami siap mendengar masukan, kritik, dan tawaran kerjasama anda") → Kartu Info Kontak varian alamat (4.11) → Kartu Info Kontak varian kontak (4.11) → Form Kontak (4.12) → Footer.
+
+Footer di semua halaman kini menautkan link "Redaksi", "Pedoman Media Siber", dan "Kontak Kami" (lihat 4.2) ke ketiga halaman ini secara nyata (bukan placeholder `#`).
 
 ## 6. Responsive Strategy (Ekstrapolasi Desktop/Tablet)
 
@@ -272,3 +316,115 @@ Bagian ini merangkum semua tempat di mana Claude membuat keputusan desain karena
 - Warna badge per kategori (bagian 3) — estimasi, bukan dari data resmi.
 - Interpretasi warna `#232429` sebagai basis Dark Mode (bagian 2.1, catatan).
 - Breakpoint tablet (768px) & desktop (1024px) serta perubahan layout di dalamnya (bagian 6) — mengikuti konvensi umum, bukan spesifikasi eksplisit dari pengguna.
+
+## 8. Konten Teks Lengkap (untuk `redaksi.html` & `pedoman-media-siber.html`)
+
+Bagian ini berisi teks final, sudah tidak perlu screenshot lagi — salin verbatim, jangan diringkas.
+
+### 8.1 Data Resmi Kontak (dipakai di `kontak-kami.html` DAN `redaksi.html`)
+
+- Alamat Redaksi: Jalan Bangau Nomor 15 Cakranegara, Kota Mataram, Nusa Tenggara Barat.
+- Telepon: (0370) 639543
+- WhatsApp: 081805211818
+- Email: suarantbcom@gmail.com
+- Link "LIHAT PETA →": arahkan ke URL pencarian Google Maps berdasarkan alamat di atas, mis. `https://www.google.com/maps/search/?api=1&query=Jalan+Bangau+Nomor+15+Cakranegara+Kota+Mataram+Nusa+Tenggara+Barat` (tidak ada koordinat pasti dari pengguna, gunakan format search query ini).
+
+### 8.2 Konten `redaksi.html`
+
+**Judul:** Perkenalkan, SUARANTB.com *(kata "SUARANTB.com" diberi style warna/link berbeda dari teks lain)*
+
+**Paragraf:**
+
+> Adalah sebuah portal berita lokal yang merupakan bagian dari Kelompok Media Bali Post (KMB) di NTB. suarantb.com didirikan oleh para awak redaksi Harian Suara NTB.
+
+> Seperti halnya Harian Suara NTB yang lahir dan tumbuh untuk menjawab tuntutan perkembangan masyarakat NTB, demikian pula dengan suarantb.com.
+
+> Kemajuan dalam cara masyarakat memperoleh informasi telah melahirkan tuntutan bagi insan pers guna melahirkan berita yang mudah dan cepat diakses oleh masyarakat. Namun, berita yang demikian harus tetap dibuat dengan penuh tanggungjawab dan tetap menjunjung tinggi nilai-nilai luhur pers di Indonesia.
+
+> Dengan demikian, akurasi pemberitaan tetap menjadi prioritas utama portal online ini. Tanpa akurasi dalam pemberitaan, sebuah media online akan runtuh reputasinya dan ditinggalkan oleh pembaca.
+
+> Portal berita ini mengusung tagline "Jendela NTB untuk Dunia". Tagline ini diaktualisasikan dalam berbagai ragam rubrik dan produk berita yang akan disuguhkan untuk pembaca suarantb.com. Tagline tersebut merupakan mimpi kami untuk menjadi sebuah portal berita dimana dunia bisa memandang NTB melalui portal berita ini.
+
+> Untuk lebih dekat dengan kami, silakan berkunjung ke kantor PT. Suara NTB Pers
+
+Diikuti bullet list data kontak (pakai data resmi di 8.1 — versi WhatsApp di halaman ini ada tanda `(*)` setelah nomornya: "081805211818. (*)").
+
+**Susunan Redaksi** (tiap jabatan = sub-heading underline bold + bullet nama):
+
+- **Pendiri:** Satria Naradha
+- **Pemimpin Umum:** I Gusti Agung Adisuarsana
+- **Penanggung Jawab/Pemimpin Redaksi:** Marham
+- **Redaktur:** Muhammad Kasim; Fitriani Agustina; Atanasius Rony Fernandez
+- **Staf Redaksi:**
+  - Mataram: Muhammad Kasim, Ahmad Bulkaini, Ahmad Hiswandi, Umaera, Nurmita, Sibawaeh, Pandi
+  - Lombok Barat: M. Haeruzzubaidi
+  - Lombok Tengah: Munakir
+  - Lombok Timur: Rusliadi
+  - Lombok Utara: Johari
+  - Sumbawa: Ilham Syahroni
+  - Sumbawa Barat: Heri Andi
+  - Dompu: Nasrullah
+  - Bima/Kota Bima: Nur Wahirah Hijaralia Azzahra
+- **Video Jurnalis:** Alfan Hady; Dimas Loveian DN
+- **Staff IT:** Alfan Hady
+- **Admin Web dan Media Sosial:** Ayu Apriel
+- **Staff Marketing dan Iklan:** Zulkarnaen; Nanik Hidayati
+- **Keuangan:** Ari Nila Dewi
+
+### 8.3 Konten `pedoman-media-siber.html`
+
+**Judul:** Pedoman Media Siber
+
+**Paragraf pembuka:**
+
+> Kemerdekaan berpendapat, kemerdekaan berekspresi, dan kemerdekaan pers adalah hak asasi manusia yang dilindungi Pancasila, Undang-Undang Dasar 1945, dan Deklarasi Universal Hak Asasi Manusia PBB. Keberadaan media siber di Indonesia juga merupakan bagian dari kemerdekaan berpendapat, berekspresi, dan kemerdekaan pers.
+
+> Media siber memiliki karakter khusus sehingga memerlukan pedoman agar pengelolaannya dapat dilaksanakan secara profesional, memenuhi fungsi, hak, dan kewajibannya sesuai Undang-Undang Nomor 40 Tahun 1999 tentang Pers dan Kode Etik Jurnalistik. Untuk itu Dewan Pers bersama organisasi pers, pengelola media siber, dan masyarakat menyusun Pedoman Pemberitaan Media Siber sebagai berikut:
+
+**1. Ruang Lingkup**
+Media Siber adalah segala bentuk media yang menggunakan wahana Internet dan melaksanakan kegiatan jurnalistik, serta memenuhi persyaratan Undang-Undang Pers dan Standar Perusahaan Pers yang ditetapkan Dewan Pers. Isi Buatan Pengguna (User Generated Content) adalah isi yang dibuat dan atau dipublikasikan oleh pengguna media siber, antara lain, artikel, gambar, komentar, video dan berbagai bentuk unggahan lain yang melekat pada media siber, seperti blog, forum, komentar pembaca atau pemirsa, dan bentuk lain.
+
+**2. Verifikasi dan Keberimbangan Berita**
+a. Pada prinsipnya setiap berita harus melalui verifikasi.
+b. Berita yang dapat merugikan pihak lain memerlukan prinsip akurasi dan keberimbangan.
+c. Ketentuan dalam butir (a) di atas dikecualikan, dengan syarat: berita benar-benar mengandung kepentingan publik yang bersifat mendesak; sumber berita yang pertama adalah sumber yang jelas disebutkan identitasnya, kredibel dan kompeten; subyek berita yang harus dikonfirmasi tidak diketahui keberadaannya atau tidak dapat diwawancarai; media memberikan penjelasan kepada pembaca bahwa berita tersebut masih memerlukan verifikasi lebih lanjut dan diupayakan dalam waktu secepatnya — penjelasan dimuat pada bagian akhir dari berita yang sama, di dalam kurung dan menggunakan huruf miring.
+d. Setelah memuat berita sesuai butir (c), media wajib meneruskan upaya verifikasi, dan setelah verifikasi didapatkan, hasil verifikasi dicantumkan pada berita pemutakhiran (update) dengan tautan pada berita yang belum terverifikasi.
+
+**3. Isi Buatan Pengguna (User Generated Content)**
+a. Media siber wajib mencantumkan syarat dan ketentuan mengenai Isi Buatan Pengguna yang tidak bertentangan dengan Undang-Undang No. 40 tahun 1999 tentang Pers dan Kode Etik Jurnalistik, ditempatkan secara terang dan jelas.
+b. Media siber mewajibkan setiap pengguna untuk melakukan registrasi keanggotaan dan melakukan proses log-in terlebih dahulu sebelum mempublikasikan semua bentuk Isi Buatan Pengguna lebih lanjut.
+c. Dalam registrasi tersebut, media siber wajib mewajibkan pengguna memberi persetujuan tertulis bahwa Isi Buatan Pengguna yang dipublikasikan tidak akan: (a) memuat isi bohong, fitnah, sadis dan cabul; (b) memuat isi yang mengandung prasangka dan kebencian terkait dengan suku, agama, ras, dan antargolongan (SARA), serta menganjurkan tindakan kekerasan; (c) memuat isi diskriminatif atas dasar perbedaan jenis kelamin dan bahasa, serta merendahkan martabat orang lemah, miskin, sakit, cacat jiwa, atau cacat jasmani.
+d. Media siber memiliki kewenangan mutlak untuk mengedit atau menghapus Isi Buatan Pengguna yang bertentangan dengan butir (c) di atas, serta wajib menyediakan mekanisme pengaduan yang dinilai melanggar ketentuan tersebut. Mekanisme tersebut harus disediakan di tempat yang mudah dapat diakses pengguna.
+e. Media siber wajib menyunting, menghapus, dan melakukan tindakan koreksi setiap Isi Buatan Pengguna yang melanggar ketentuan butir (c), segera mungkin secara proporsional selambat-lambatnya 2 × 24 jam setelah pengaduan diterima.
+f. Media siber yang telah memenuhi ketentuan butir (a), (b), (c), dan (e) dibebaskan dari tanggung jawab atas masalah yang ditimbulkan akibat pemuatan isi yang melanggar ketentuan pada butir (c).
+g. Media siber bertanggung jawab atas Isi Buatan Pengguna yang dipublikasikan bila tidak mengambil tindakan koreksi setelah batas waktu sebagaimana tersebut pada butir (f).
+
+**4. Ralat, Koreksi, dan Hak Jawab**
+a. Ralat, koreksi, dan hak jawab mengacu pada Undang-Undang Pers, Kode Etik Jurnalistik, dan Pedoman Hak Jawab yang ditetapkan Dewan Pers.
+b. Ralat, koreksi dan atau hak jawab wajib dimuat pada berita yang diralat, dikoreksi, atau yang diberi hak jawab tersebut.
+c. Di setiap ralat, koreksi, dan hak jawab dicantumkan waktu pemuatan ralat, koreksi, dan hak jawab tersebut.
+d. Bila suatu berita media siber tertentu disebarluaskan media siber lain, maka: tanggung jawab berita pembuat berita terbatas pada berita yang dipublikasikan di media siber tersebut atau media siber yang berada di bawah otoritas teknisnya; koreksi berita yang dilakukan oleh sebuah media siber juga harus dilakukan oleh media siber lain yang mengutip berita dari media siber yang dikoreksi itu; media yang menyebarluaskan berita dari sebuah media siber dan tidak melakukan koreksi atas berita sesuai yang dilakukan oleh media siber pemilik dan atau pembuat berita, bertanggung jawab penuh atas semua akibat hukum dari berita yang tidak dikoreksinya itu.
+e. Sesuai dengan Undang-Undang Pers, media siber yang tidak melayani hak jawab dapat dijatuhi sanksi hukum pidana denda paling banyak Rp500.000.000 (Lima ratus juta rupiah).
+
+**5. Pencabutan Berita**
+a. Berita yang sudah dipublikasikan tidak dapat dicabut karena alasan penyensoran dari pihak luar redaksi, kecuali terkait masalah SARA, kesusilaan, masa depan anak, pengalaman traumatik korban, atau berdasarkan pertimbangan khusus lain yang ditetapkan Dewan Pers.
+b. Media siber lain wajib mengikuti pencabutan kutipan berita dari media asal yang telah dicabut.
+c. Pencabutan berita wajib disertai dengan alasan pencabutan dan diumumkan kepada publik.
+
+**6. Iklan**
+a. Media siber wajib membedakan dengan tegas antara produk berita dan iklan.
+b. Setiap berita/artikel/isi yang merupakan iklan atau isi berbayar wajib mencantumkan keterangan "advertorial", "iklan", "ads", atau kata lain yang menjelaskan bahwa berita/artikel/isi tersebut adalah iklan.
+
+**7. Hak Cipta**
+Media siber wajib menghormati hak cipta sebagaimana diatur dalam peraturan perundang-undangan yang berlaku.
+
+**8. Pencantuman Pedoman**
+Media siber wajib mencantumkan Pedoman Pemberitaan Media Siber ini di medianya secara terang dan jelas.
+
+**9. Sengketa**
+Penilaian akhir atas sengketa mengenai pelaksanaan Pedoman Pemberitaan Media Siber ini diselesaikan oleh Dewan Pers.
+
+**Penutup:**
+
+> Jakarta, 3 Februari 2012
+> (Pedoman ini ditandatangani oleh Dewan Pers dan komunitas pers di Jakarta, 3 Februari 2012)
