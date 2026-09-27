@@ -1,134 +1,97 @@
-/**
- * Data Berita SuaraNTB
- */
 const SUARA_NTB_DATA = {
-  // 5 Berita Headline untuk Slider Utama & 4 Kotak di bawahnya
   headlines: [
     {
       id: 101,
-      title: "Gubernur NTB Tinjau Kesiapan Infrastruktur Jalan Menuju Sirkuit Mandalika",
-      category: "Ekonomi",
-      badgeClass: "badge-ekonomi",
+      title: "Ribuan Pelari Padati Garis Start Lombok Sumbawa Marathon 2025 di Sirkuit Mandalika",
+      category: "Olahraga",
+      badgeClass: "badge-olahraga",
       date: "31 Agustus 2026",
       time: "14:30 WITA",
-      author: "Ahmad Rifai",
-      tags: ["Mandalika", "Infrastruktur", "Ekonomi NTB", "Pariwisata"],
-      thumb: "https://images.unsplash.com/photo-1578874691223-a49262e0c94f?w=900&auto=format&fit=crop&q=80",
-      excerpt: "Pemerintah Provinsi NTB memastikan percepatan pengerjaan akses jalan utama penunjang pariwisata Mandalika tuntas sebelum agenda internasional berlangsung.",
+      author: "Rian Hidayat",
+      tags: ["Mandalika", "Marathon", "Olahraga NTB", "Pariwisata"],
+      thumb: "images/gambar_berita/headline_image/BN_image1.png",
+      excerpt: "Bendera Merah Putih dikibarkan di garis START-FINISH, mobil pace car biru memimpin start dengan latar perbukitan Mandalika dan ribuan peserta berbaju biru.",
       content: `
-        <p><strong>Lombok Tengah</strong> — Gubernur Nusa Tenggara Barat (NTB) melakukan peninjauan langsung terhadap progres pengerjaan infrastruktur bypass dan jalan pendukung menuju kawasan ekonomi khusus Mandalika pada hari Senin.</p>
-        <p>Dalam kunjungannya, Gubernur menekankan bahwa kualitas infrastruktur menjadi kunci utama kenyamanan wisatawan dan efisiensi mobilitas logistik masyarakat lokal.</p>
+        <p><strong>Lombok Tengah</strong> — Ribuan pelari memadati garis start Lombok Sumbawa Marathon 2025 di kawasan Sirkuit Mandalika. Genderang start dibunyikan di bawah gerbang biru bertuliskan START-FINISH dengan dukungan SMBC Indonesia.</p>
+        <p>Panitia menyebut ajang lari ini menjadi magnet sport tourism NTB. Peserta dari berbagai daerah tampak antusias mengabadikan momen start yang dipimpin pace car sport biru.</p>
       `
     },
     {
       id: 102,
-      title: "Kontingen NTB Targetkan Masuk 10 Besar di Ajang PON 2026 Mendatang",
-      category: "Olahraga",
-      badgeClass: "badge-olahraga",
+      title: "BPR NTB Perseroda Teken Kerja Sama Pengelolaan Dana Pensiun DPLK Syariah dengan Bank Muamalat",
+      category: "Ekonomi",
+      badgeClass: "badge-ekonomi",
       date: "31 Agustus 2026",
       time: "13:15 WITA",
-      author: "Rian Hidayat",
-      tags: ["PON", "Olahraga NTB", "Atlet", "KONI"],
-      thumb: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=900&auto=format&fit=crop&q=80",
-      excerpt: "KONI NTB optimis atlet-atlet unggulan dari cabang atletik, tinju, dan panjat tebing mampu mempersembahkan medali emas bagi Bumi Gora.",
+      author: "Ahmad Rifai",
+      tags: ["BPR NTB", "DPLK Syariah", "Bank Muamalat", "Ekonomi NTB"],
+      thumb: "images/gambar_berita/headline_image/BN_image2.png",
+      excerpt: "Empat pimpinan lembaga berpose memegang dokumen PKS di depan spanduk Perjanjian Kerja Sama BPR NTB dengan DPLK Syariah Muamalat.",
       content: `
-        <p><strong>Mataram</strong> — Komite Olahraga Nasional Indonesia (KONI) Provinsi NTB terus menggenjot pemusatan latihan daerah bagi para atlet yang dipersiapkan menuju PON 2026.</p>
+        <p><strong>Mataram</strong> — BPR NTB Perseroda menandatangani Perjanjian Kerja Sama dengan DPLK Syariah Bank Muamalat Indonesia Tbk tentang pengelolaan dana pensiun lembaga keuangan.</p>
+        <p>Kerja sama ini diharapkan memperkuat layanan keuangan syariah dan perluasan kepesertaan dana pensiun di NTB.</p>
       `
     },
     {
       id: 103,
-      title: "Polda NTB Ungkap Sindikat Penyelundupan Kayu Ilegal Lintas Pulau di Sumbawa",
-      category: "Hukrim",
-      badgeClass: "badge-hukrim",
+      title: "BPBD NTB Gelar Koordinasi Malam di Tenda Darurat Penanganan Bencana",
+      category: "NTB",
+      badgeClass: "badge-umum",
       date: "31 Agustus 2026",
       time: "11:15 WITA",
       author: "Dian Pratama",
-      tags: ["Polda NTB", "Hukrim", "Sumbawa", "Illegal Logging"],
-      thumb: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=900&auto=format&fit=crop&q=80",
-      excerpt: "Aparat kepolisian berhasil menyita puluhan meter kubik kayu sonokeling hasil pembalakan liar di kawasan hutan lindung Sumbawa.",
+      tags: ["BPBD", "Bencana", "NTB", "Posko Darurat"],
+      thumb: "images/gambar_berita/headline_image/BN_image3.png",
+      excerpt: "Petugas berompi BPBD berdiskusi memeriksa dokumen di dalam tenda putih pada malam hari bersama aparat terkait.",
       content: `
-        <p><strong>Mataram</strong> — Tim Ditreskrimsus Polda NTB berhasil membongkar sindikat perdagangan kayu ilegal lintas pulau yang beroperasi di wilayah hutan lindung Kabupaten Sumbawa.</p>
+        <p><strong>Mataram</strong> — BPBD NTB menggelar koordinasi malam di tenda darurat. Petugas mengenakan rompi BPBD tampak mencermati dokumen penanganan di atas meja posko.</p>
+        <p>Koordinasi lintas instansi dilakukan untuk memastikan logistik dan pendataan pengungsi berjalan cepat dan tepat.</p>
       `
     },
     {
       id: 104,
-      title: "DPRD NTB Resmi Sahkan Raperda Perlindungan Lahan Pertanian Berkelanjutan",
+      title: "Rapat Dengar Pendapat DPRD NTB Bahas Evaluasi Kebijakan Pembangunan Daerah",
       category: "Politik",
       badgeClass: "badge-politik",
       date: "31 Agustus 2026",
       time: "09:40 WITA",
       author: "Siti Rahma",
-      tags: ["DPRD NTB", "Politik", "Pertanian", "Raperda"],
-      thumb: "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=900&auto=format&fit=crop&q=80",
-      excerpt: "Sidang paripurna DPRD NTB menyetujui rancangan peraturan daerah guna membendung alih fungsi lahan sawah produktif di Pulau Lombok dan Sumbawa.",
+      tags: ["DPRD NTB", "Politik", "Rapat Dewan", "Kebijakan"],
+      thumb: "images/gambar_berita/headline_image/BN_image4.png",
+      excerpt: "Seorang narasumber berbaju putih menyampaikan paparan di depan mikrofon dan laptop dalam ruang rapat dewan.",
       content: `
-        <p><strong>Mataram</strong> — Sidang paripurna DPRD NTB resmi menetapkan Perda perlindungan sawah produktif demi menjaga kedaulatan pangan NTB.</p>
+        <p><strong>Mataram</strong> — Rapat dengar pendapat DPRD NTB membahas evaluasi kebijakan pembangunan. Seorang pembicara menyampaikan paparan di hadapan peserta rapat dengan dukungan data di laptop.</p>
+        <p>Peserta rapat terlihat menyimak paparan terkait capaian dan tantangan program prioritas daerah.</p>
       `
     },
     {
       id: 105,
-      title: "Inovasi Siswa SMK Lombok Timur Ciptakan Prototipe Motor Bertenaga Surya",
-      category: "Pendidikan",
-      badgeClass: "badge-pendidikan",
+      title: "Diseminasi Temuan Awal Migrasi Non-Prosedural NTB Digelar di Mataram",
+      category: "NTB",
+      badgeClass: "badge-umum",
       date: "30 Agustus 2026",
       time: "16:20 WITA",
       author: "M. Faisal",
-      tags: ["Pendidikan", "SMK", "Inovasi", "Lombok Timur"],
-      thumb: "https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=900&auto=format&fit=crop&q=80",
-      excerpt: "Siswa jurusan teknik otomotif berhasil merakit prototipe kendaraan ramah lingkungan dengan memanfaatkan sel surya berdaya jangkau 60 km.",
+      tags: ["Migrasi", "Workshop", "NTB", "Ketenagakerjaan"],
+      thumb: "images/gambar_berita/headline_image/BN_image5.png",
+      excerpt: "Sejumlah peserta berfoto bersama usai workshop The Migration Landscape: Stakeholder Dynamics di hotel Mataram dengan layar presentasi ungu di belakang.",
       content: `
-        <p><strong>Selong</strong> — Siswa-siswi SMK di Lombok Timur berhasil meluncurkan prototipe motor listrik ramah lingkungan bertenaga surya.</p>
+        <p><strong>Mataram</strong> — Kegiatan Diseminasi Temuan Awal dan Workshop Teknis Pengumpulan Data tentang lanskap migrasi dan jalur non-prosedural di NTB digelar menghadirkan pemangku kepentingan lintas sektor.</p>
+        <p>Peserta dari unsur pemerintah, akademisi, dan LSM berdiskusi memperkuat tata kelola migrasi aman di NTB.</p>
       `
     }
   ],
-
-  // 5 Berita tiap kategori sesuai susunan navigasi
   categorySections: [
     {
       slug: "ntb",
       name: "NTB",
       badgeClass: "badge-umum",
       articles: [
-        {
-          id: 201,
-          title: "Revitalisasi Ruang Terbuka Hijau Kota Mataram Sasar Kawasan Udayana",
-          date: "31 Agustus 2026",
-          time: "15:00 WITA",
-          thumb: "https://images.unsplash.com/photo-1519331379826-f10be5486c6f?w=800&auto=format&fit=crop&q=80",
-          excerpt: "Pemerintah Kota Mataram mempercantik trotoar dan fasilitas ramah anak di sepanjang Jalan Udayana guna meningkatkan kenyamanan ruang publik perkotaan."
-        },
-        {
-          id: 202,
-          title: "Petani Jagung di Dompu Mulai Memasuki Musim Tanam Kedua dengan Bibit Unggul",
-          date: "30 Agustus 2026",
-          time: "14:10 WITA",
-          thumb: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=600&auto=format&fit=crop&q=80",
-          excerpt: "Dinas Pertanian Dompu menyalurkan ribuan kantong bibit varietas tahan cuaca kering."
-        },
-        {
-          id: 203,
-          title: "Pesona Tiga Gili di Lombok Utara Tarik Ratusan Wisatawan Mancanegara Tiap Hari",
-          date: "29 Agustus 2026",
-          time: "12:30 WITA",
-          thumb: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600&auto=format&fit=crop&q=80",
-          excerpt: "Tingkat hunian kamar hotel di Gili Trawangan mencapai 85 persen pada akhir pekan ini."
-        },
-        {
-          id: 204,
-          title: "Pemkab Sumbawa Barat Salurkan Bantuan Alat Tangkap Modern untuk Nelayan",
-          date: "28 Agustus 2026",
-          time: "10:00 WITA",
-          thumb: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&auto=format&fit=crop&q=80",
-          excerpt: "Dukungan armada perahu dan mesin perikanan diserahkan langsung oleh Bupati KSB."
-        },
-        {
-          id: 205,
-          title: "Tradisi Pacuan Kuda Tradisional di Bima Tetap Jadi Magnet Wisata Budaya",
-          date: "27 Agustus 2026",
-          time: "09:15 WITA",
-          thumb: "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=600&auto=format&fit=crop&q=80",
-          excerpt: "Penyelenggaraan pacuan kuda di Bima berlangsung meriah dan dipadati warga setempat."
-        }
+        { id: 201, title: "Tokoh Masyarakat Mataram Tersenyum Usai Dialog Pembangunan Kota", date: "31 Agustus 2026", time: "15:00 WITA", thumb: "images/gambar_berita/ntb_image/mataram/IMG-20260924-WA0100-696x522.webp", excerpt: "Seorang tokoh berpakaian hitam dan peci hitam tersenyum ramah di sebuah lobi hotel usai berdiskusi soal pembangunan." },
+        { id: 202, title: "Ratusan Warga Gelar Shalat Berjamaah di Lapangan Terbuka Dompu", date: "30 Agustus 2026", time: "14:10 WITA", thumb: "images/gambar_berita/ntb_image/dompu/WhatsApp-Image-2026-09-20-at-19.13.26-696x387.webp", excerpt: "Barisan jamaah pria khusyuk melaksanakan shalat berjamaah di atas sajadah di lapangan dengan pepohonan dan bangunan di kejauhan." },
+        { id: 203, title: "DPD Partai Perindo Rayakan HUT ke-11 di Lombok Utara dengan Doa Bersama", date: "29 Agustus 2026", time: "12:30 WITA", thumb: "images/gambar_berita/ntb_image/lombok_utara/WhatsApp-Image-2026-09-17-at-22.05.04-696x392.webp", excerpt: "Tujuh pengurus Perindo berfoto di depan spanduk HUT 11 tahun partai berlambang rajawali di sebuah aula sederhana." },
+        { id: 204, title: "Retret Kepemimpinan Perangkat Daerah Sumbawa Barat Resmi Ditutup", date: "28 Agustus 2026", time: "10:00 WITA", thumb: "images/gambar_berita/ntb_image/sumbawa_barat/WhatsApp-Image-2026-09-20-at-19.15.36-696x433.webp", excerpt: "Puluhan peserta berpakaian khaki berpose bersama di aula KSB MAJU usai penutupan retret kepemimpinan kepala perangkat daerah 2025." },
+        { id: 205, title: "Warga Bima Padati Pinggir Jalan Saksikan Kirab Budaya", date: "27 Agustus 2026", time: "09:15 WITA", thumb: "images/gambar_berita/ntb_image/bima/WhatsApp-Image-2026-09-21-at-07.03.34-696x392.webp", excerpt: "Kerumunan warga berdiri di tepi jalan desa menanti iring-iringan kendaraan hias di bawah terik matahari." }
       ]
     },
     {
@@ -136,46 +99,11 @@ const SUARA_NTB_DATA = {
       name: "Ekonomi",
       badgeClass: "badge-ekonomi",
       articles: [
-        {
-          id: 1,
-          title: "Gubernur NTB Tinjau Kesiapan Infrastruktur Jalan Menuju Sirkuit Mandalika",
-          date: "31 Agustus 2026",
-          time: "14:30 WITA",
-          thumb: "https://images.unsplash.com/photo-1578874691223-a49262e0c94f?w=800&auto=format&fit=crop&q=80",
-          excerpt: "Pemerintah Provinsi NTB memastikan percepatan pengerjaan akses jalan utama penunjang pariwisata Mandalika tuntas sebelum agenda internasional berlangsung."
-        },
-        {
-          id: 6,
-          title: "Harga Cabai Rawit di Pasar Tradisional Mataram Mulai Berangsur Turun",
-          date: "28 Agustus 2026",
-          time: "08:15 WITA",
-          thumb: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=600&auto=format&fit=crop&q=80",
-          excerpt: "Pasokan melimpah dari sentra panen Lombok Timur membuat harga komoditas cabai kembali terjangkau."
-        },
-        {
-          id: 301,
-          title: "Pariwisata Desa Sade Alami Lonjakan Kunjungan Sebesar 25 Persen",
-          date: "27 Agustus 2026",
-          time: "11:20 WITA",
-          thumb: "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=600&auto=format&fit=crop&q=80",
-          excerpt: "Pelaku UMKM tenun ikat tradisional Sasak merasakan dampak positif peningkatan kunjungan turis."
-        },
-        {
-          id: 302,
-          title: "Bank NTB Syariah Catat Pertumbuhan Aset Dua Digit pada Semester Pertama 2026",
-          date: "26 Agustus 2026",
-          time: "13:40 WITA",
-          thumb: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=600&auto=format&fit=crop&q=80",
-          excerpt: "Kinerja positif didorong oleh ekspansi pembiayaan modal kerja UMKM di kabupaten/kota NTB."
-        },
-        {
-          id: 303,
-          title: "Investasi Pabrik Pengolahan Rumput Laut Siap Beroperasi di Teluk Saleh Sumbawa",
-          date: "25 Agustus 2026",
-          time: "16:00 WITA",
-          thumb: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=600&auto=format&fit=crop&q=80",
-          excerpt: "Fasilitas hilirisasi rumput laut ini diharapkan mampu menyerap ratusan tenaga kerja lokal."
-        }
+        { id: 1, title: "Pejabat NTB Tinjau Cold Storage Tuna Ekspor di Pelabuhan Perikanan", date: "31 Agustus 2026", time: "14:30 WITA", thumb: "images/gambar_berita/ekonimi_image/IMG-20260924-WA0117.webp", excerpt: "Rombongan pejabat berjas lab putih dan penutup kepala memeriksa jajaran tuna segar di ruang pendingin dengan meja biru." },
+        { id: 6, title: "Pejabat Perangkat Daerah Paparkan Strategi Penguatan Ekonomi di Kantor", date: "28 Agustus 2026", time: "08:15 WITA", thumb: "images/gambar_berita/ekonimi_image/IMG-20260924-WA0118-696x508.webp", excerpt: "Seorang pejabat berbaju dinas putih memegang ponsel di ruang kerja dengan kalender Bank NTB Syariah di atas meja." },
+        { id: 301, title: "Pekerja Perempuan Tekuni Produksi Rokok Kretek di Sentra Tembakau NTB", date: "27 Agustus 2026", time: "11:20 WITA", thumb: "images/gambar_berita/ekonimi_image/PRODUKSI-696x389.webp", excerpt: "Sejumlah pekerja perempuan berhijab duduk di meja panjang memilin rokok kretek secara manual dengan wadah tembakau biru di depan." },
+        { id: 302, title: "Tumpukan Sak Semen Menandai Progres Pembangunan Infrastruktur Desa", date: "26 Agustus 2026", time: "13:40 WITA", thumb: "images/gambar_berita/ekonimi_image/SEMEN-696x494.webp", excerpt: "Karung-karung semen Indocement menumpuk di lokasi proyek pembangunan gedung dengan pekerja di latar belakang." },
+        { id: 303, title: "Astra Motor Resmikan Desa Sejahtera Astra Bengkaung Binaan", date: "25 Agustus 2026", time: "16:00 WITA", thumb: "images/gambar_berita/ekonimi_image/IMG-20260925-WA0076.webp", excerpt: "Dua perwakilan berpose membentuk simbol hati di depan spanduk Peresmian Desa Sejahtera Astra ke-56." }
       ]
     },
     {
@@ -183,46 +111,11 @@ const SUARA_NTB_DATA = {
       name: "Politik",
       badgeClass: "badge-politik",
       articles: [
-        {
-          id: 3,
-          title: "DPRD NTB Sahkan Raperda Perlindungan Lahan Pertanian Berkelanjutan",
-          date: "31 Agustus 2026",
-          time: "09:40 WITA",
-          thumb: "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=800&auto=format&fit=crop&q=80",
-          excerpt: "Sidang paripurna DPRD NTB menyetujui rancangan peraturan daerah guna membendung alih fungsi lahan sawah produktif di Pulau Lombok dan Sumbawa."
-        },
-        {
-          id: 8,
-          title: "KPU NTB Siapkan Simulasi Pemilihan Kepala Daerah di Wilayah Terpencil",
-          date: "26 Agustus 2026",
-          time: "10:30 WITA",
-          thumb: "https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?w=600&auto=format&fit=crop&q=80",
-          excerpt: "Komisi Pemilihan Umum NTB memetakan tantangan distribusi logistik surat suara di pulau-pulau terluar."
-        },
-        {
-          id: 401,
-          title: "Bawaslu NTB Luncurkan Gerakan Partisipatif Awasi Kampanye Digital",
-          date: "25 Agustus 2026",
-          time: "14:20 WITA",
-          thumb: "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=600&auto=format&fit=crop&q=80",
-          excerpt: "Masyarakat diajak aktif melaporkan penyebaran hoaks dan ujaran kebencian di media sosial."
-        },
-        {
-          id: 402,
-          title: "Gubernur dan Pimpinan Parpol Sepakat Jaga Kondusivitas Menuju Pilkada Serentak",
-          date: "24 Agustus 2026",
-          time: "16:50 WITA",
-          thumb: "https://images.unsplash.com/photo-1577962917302-cd874c4e31d2?w=600&auto=format&fit=crop&q=80",
-          excerpt: "Deklarasi damai ditandatangani oleh seluruh perwakilan pimpinan partai politik se-NTB."
-        },
-        {
-          id: 403,
-          title: "Komisi I DPRD NTB Uji Kelayakan Calon Anggota Komisi Penyiaran Daerah",
-          date: "23 Agustus 2026",
-          time: "11:10 WITA",
-          thumb: "https://images.unsplash.com/photo-1450133064473-71024230f91b?w=600&auto=format&fit=crop&q=80",
-          excerpt: "Sebanyak 14 peserta mengikuti tahapan fit and proper test di ruang sidang dewan."
-        }
+        { id: 3, title: "Rapat Paripurna DPRD NTB Bahas Perlindungan Lahan Pertanian Berkelanjutan", date: "31 Agustus 2026", time: "09:40 WITA", thumb: "images/gambar_berita/politik_image/IMG-20260918-WA0112-696x522.webp", excerpt: "Pimpinan dan anggota dewan duduk di ruang paripurna megah dengan layar bertuliskan Rapat Paripurna DPRD Provinsi NTB." },
+        { id: 8, title: "Konsolidasi Kader Partai Digelar di Taman Asri Mataram", date: "26 Agustus 2026", time: "10:30 WITA", thumb: "images/gambar_berita/politik_image/IMG-20260918-WA0119-696x392.webp", excerpt: "Puluhan kader berdiri bersama di area berpohon rindang sambil mengepalkan tangan sebagai simbol solidaritas." },
+        { id: 401, title: "Anggota DPRD Perempuan Sampaikan Pandangan dalam Rapat Komisi", date: "25 Agustus 2026", time: "14:20 WITA", thumb: "images/gambar_berita/politik_image/IMG-20260921-WA0161-696x446.webp", excerpt: "Seorang anggota dewan perempuan berhijab berbicara di depan mikrofon meja rapat dengan ekspresi tegas." },
+        { id: 402, title: "Juru Bicara Dewan Paparkan Evaluasi Program Legislasi Daerah", date: "24 Agustus 2026", time: "16:50 WITA", thumb: "images/gambar_berita/politik_image/Lalu-Pelita-Putra-696x447.webp", excerpt: "Pria berbaju batik duduk menyampaikan paparan sambil mengangkat tangan di ruang rapat." },
+        { id: 403, title: "Pengamat Kebijakan Soroti Tata Kelola Pemerintahan dalam Forum Dewan", date: "23 Agustus 2026", time: "11:10 WITA", thumb: "images/gambar_berita/politik_image/Muhammad-Aminurlah-696x447.webp", excerpt: "Seorang narasumber berkemeja garis memperjelas argumen sambil mengacungkan jari di forum diskusi." }
       ]
     },
     {
@@ -230,46 +123,11 @@ const SUARA_NTB_DATA = {
       name: "Hukum dan Kriminal",
       badgeClass: "badge-hukrim",
       articles: [
-        {
-          id: 2,
-          title: "Polda NTB Ungkap Jaringan Penyelundupan Kayu Ilegal di Sumbawa",
-          date: "31 Agustus 2026",
-          time: "11:15 WITA",
-          thumb: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&auto=format&fit=crop&q=80",
-          excerpt: "Aparat kepolisian berhasil menyita puluhan meter kubik kayu sonokeling hasil pembalakan liar di kawasan hutan lindung Sumbawa."
-        },
-        {
-          id: 7,
-          title: "Kejari Mataram Tingkatkan Penyelidikan Dugaan Penyelewengan Bansos",
-          date: "27 Agustus 2026",
-          time: "13:45 WITA",
-          thumb: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&auto=format&fit=crop&q=80",
-          excerpt: "Penyidik Kejaksaan memeriksa 12 saksi terkait dugaan penyaluran bansos yang tidak tepat sasaran."
-        },
-        {
-          id: 501,
-          title: "Polresta Mataram Ringkus Residivis Pencurian Sepeda Motor di Kos Mahasiswa",
-          date: "25 Agustus 2026",
-          time: "19:30 WITA",
-          thumb: "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=600&auto=format&fit=crop&q=80",
-          excerpt: "Pelaku diamankan bersama barang bukti dua unit motor matik hasil kejahatan di wilayah Sekarbela."
-        },
-        {
-          id: 502,
-          title: "BNNP NTB Musnahkan Narkotika Jenis Sabu Senilai Rp1,2 Miliar",
-          date: "24 Agustus 2026",
-          time: "10:15 WITA",
-          thumb: "https://images.unsplash.com/photo-1584467735815-f778f274e296?w=600&auto=format&fit=crop&q=80",
-          excerpt: "Barang bukti dimusnahkan dengan mesin insinerator disaksikan oleh perwakilan kejaksaan dan pengadilan."
-        },
-        {
-          id: 503,
-          title: "Gakkum KLHK Limpahkan Berkas Tambang Emas Tanpa Izin di Sekotong ke Jaksa",
-          date: "22 Agustus 2026",
-          time: "14:40 WITA",
-          thumb: "https://images.unsplash.com/photo-1618042164219-62c820f10723?w=600&auto=format&fit=crop&q=80",
-          excerpt: "Dua tersangka pemilik gelondong emas ilegal terancam hukuman pidana penjara 10 tahun."
-        }
+        { id: 2, title: "Kejari Mataram Dalami Dugaan Penyelewengan Anggaran, Periksa Saksi", date: "31 Agustus 2026", time: "11:15 WITA", thumb: "images/gambar_berita/hukrim_image/Gde-Made-Pasek-Swardhyana-696x515.webp", excerpt: "Pejabat Kejaksaan beruniform cokelat dengan tanda pangkat tersenyum di area parkir kendaraan dinas." },
+        { id: 7, title: "Polresta Mataram Amankan Terduga Pelaku Pencurian, Hadirkan Barang Bukti Motor", date: "27 Agustus 2026", time: "13:45 WITA", thumb: "images/gambar_berita/hukrim_image/IMG-20260922-WA0190-696x522.webp", excerpt: "Dua anggota polisi berdiri mengapit terduga berbaju merah dengan wajah diburamkan, tangan terborgol kuning." },
+        { id: 501, title: "Aparat TNI-Polri Gelar Rapat Koordinasi Pengamanan di Aula Bersama", date: "25 Agustus 2026", time: "19:30 WITA", thumb: "images/gambar_berita/hukrim_image/IMG-20260925-WA0146-696x464.webp", excerpt: "Perwira TNI dan Polri duduk berjajar di meja beralas biru dengan bunga dan air mineral membahas pengamanan wilayah." },
+        { id: 502, title: "Tokoh Agama dan Akademisi Sampaikan Keterangan dalam Konferensi Pers", date: "24 Agustus 2026", time: "10:15 WITA", thumb: "images/gambar_berita/hukrim_image/WhatsApp-Image-2026-09-23-at-21.09.37-696x522.webp", excerpt: "Seorang tokoh bersorban putih berbicara di mikrofon didampingi moderator di ruang jumpa pers." },
+        { id: 503, title: "Jaksa Teliti Berkas Penyitaan Motor sebagai Barang Bukti di Halaman Kantor", date: "22 Agustus 2026", time: "14:40 WITA", thumb: "images/gambar_berita/hukrim_image/IMG-20260924-WA0116-696x522.webp", excerpt: "Dua jaksa dan seorang petugas memeriksa motor biru-putih yang terparkir di halaman kantor dengan dokumen di tangan." }
       ]
     },
     {
@@ -277,46 +135,11 @@ const SUARA_NTB_DATA = {
       name: "Pendidikan",
       badgeClass: "badge-pendidikan",
       articles: [
-        {
-          id: 4,
-          title: "Inovasi SMK di Lombok Timur Ciptakan Motor Listrik Bertenaga Surya",
-          date: "30 Agustus 2026",
-          time: "16:20 WITA",
-          thumb: "https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=800&auto=format&fit=crop&q=80",
-          excerpt: "Siswa jurusan teknik otomotif berhasil merakit prototipe kendaraan ramah lingkungan dengan memanfaatkan sel surya fleksibel."
-        },
-        {
-          id: 601,
-          title: "Universitas Mataram Buka Tiga Program Studi Baru Berbasis Sains Lingkungan",
-          date: "29 Agustus 2026",
-          time: "09:30 WITA",
-          thumb: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&auto=format&fit=crop&q=80",
-          excerpt: "Prodi baru disiapkan untuk merespons kebutuhan SDM ahli transisi energi dan kelautan."
-        },
-        {
-          id: 602,
-          title: "Program Beasiswa NTB Batch 2026 Kirim 50 Mahasiswa ke Kampus Unggulan Dunia",
-          date: "28 Agustus 2026",
-          time: "14:00 WITA",
-          thumb: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&auto=format&fit=crop&q=80",
-          excerpt: "Para awardee akan menempuh studi magister dan doktoral di bidang kedokteran dan teknik pangan."
-        },
-        {
-          id: 603,
-          title: "Dinas Pendidikan NTB Distribusikan Bantuan Komputer untuk SD di Pelosok Sumbawa",
-          date: "27 Agustus 2026",
-          time: "11:15 WITA",
-          thumb: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&auto=format&fit=crop&q=80",
-          excerpt: "Dukungan perangkat digital ditujukan guna memperlancar Asesmen Nasional Berbasis Komputer."
-        },
-        {
-          id: 604,
-          title: "Guru Penggerak di Lombok Tengah Kenalkan Model Belajar Kontekstual Alam",
-          date: "26 Agustus 2026",
-          time: "08:45 WITA",
-          thumb: "https://images.unsplash.com/photo-1577896851231-70ef18881754?w=600&auto=format&fit=crop&q=80",
-          excerpt: "Metode ini terbukti menaikkan antusiasme siswa dalam memahami konsep sains dan matematika."
-        }
+        { id: 4, title: "Taruna Sekolah Kedinasan Ikuti Apel Pembinaan di Pantai Lombok", date: "30 Agustus 2026", time: "16:20 WITA", thumb: "images/gambar_berita/pendidikan_image/IMG-20260918-WA0130-696x522.webp", excerpt: "Barisan taruna berbaju putih-celana hitam berdiri rapi di pasir pantai menghadap pembina upacara di tepi laut." },
+        { id: 601, title: "Seminar RUU Sisdiknas Digelar di Mataram, Rektor dan Dosen Hadir", date: "29 Agustus 2026", time: "09:30 WITA", thumb: "images/gambar_berita/pendidikan_image/WhatsApp-Image-2026-09-20-at-14.07.07-696x565.webp", excerpt: "Kolase foto seminar Rancangan Undang-Undang Sistem Pendidikan Nasional dengan peserta memegang sertifikat dan pembicara di podium." },
+        { id: 602, title: "Workshop Penyusunan Program AKTAPRO dan Penyegaran Kurikulum Digelar", date: "28 Agustus 2026", time: "14:00 WITA", thumb: "images/gambar_berita/pendidikan_image/IMG-20260925-WA0075-696x464.webp", excerpt: "Puluhan pendidik berfoto bersama di ballroom dengan layar bertuliskan Workshop Teknis Social Up Program dan AKTAPRO." },
+        { id: 603, title: "Siswa Kelas Padati Ruang Belajar, Guru Beri Arahan Evaluasi", date: "27 Agustus 2026", time: "11:15 WITA", thumb: "images/gambar_berita/pendidikan_image/WhatsApp-Image-2026-09-19-at-07.46.52-696x522.webp", excerpt: "Siswa berhijab dan berseragam duduk di bangku kayu menghadap papan tulis di ruang kelas sederhana." },
+        { id: 604, title: "Wisuda Akbar Ratusan Mahasiswa Bergaun Kuning-Meriah Digelar di NTB", date: "26 Agustus 2026", time: "08:45 WITA", thumb: "images/gambar_berita/pendidikan_image/WhatsApp-Image-2026-09-24-at-17.34.48-696x464.webp", excerpt: "Ratusan wisudawan bertoga hitam dan selempang kuning berbaris di gedung wisuda dengan suasana meriah." }
       ]
     },
     {
@@ -324,46 +147,11 @@ const SUARA_NTB_DATA = {
       name: "Olahraga",
       badgeClass: "badge-olahraga",
       articles: [
-        {
-          id: 102,
-          title: "Kontingen NTB Targetkan Masuk 10 Besar di Ajang PON 2026 Mendatang",
-          date: "31 Agustus 2026",
-          time: "13:15 WITA",
-          thumb: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&auto=format&fit=crop&q=80",
-          excerpt: "KONI NTB optimis atlet-atlet unggulan dari cabang atletik, tinju, dan panjat tebing mampu mempersembahkan medali emas bagi Bumi Gora."
-        },
-        {
-          id: 701,
-          title: "Pelari Cepat Lalu Muhammad Zohri Sabet Emas di Kejuaraan Atletik Terbuka",
-          date: "29 Agustus 2026",
-          time: "17:30 WITA",
-          thumb: "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=600&auto=format&fit=crop&q=80",
-          excerpt: "Sprinter asal Lombok Utara tersebut mencatatkan waktu 10,18 detik pada nomor 100 meter putra."
-        },
-        {
-          id: 702,
-          title: "GOR Turida Mataram Dipadati Penonton Kejuaraan Bola Voli Antar-Klub Se-NTB",
-          date: "28 Agustus 2026",
-          time: "20:00 WITA",
-          thumb: "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?w=600&auto=format&fit=crop&q=80",
-          excerpt: "Turnamen voli bergengsi ini memperebutkan piala bergilir Gubernur NTB dengan total hadiah puluhan juta."
-        },
-        {
-          id: 703,
-          title: "Pembalap Muda Asal Mataram Lolos Seleksi Balap Motor Internasional di Sepang",
-          date: "27 Agustus 2026",
-          time: "15:20 WITA",
-          thumb: "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=600&auto=format&fit=crop&q=80",
-          excerpt: "Rider bertalenta usia 17 tahun ini bakal berlaga di kategori Moto3 junior musim depan."
-        },
-        {
-          id: 704,
-          title: "Komunitas Sepeda Lombok Gelar Tour de Sembalun Jelajahi Kaki Gunung Rinjani",
-          date: "25 Agustus 2026",
-          time: "07:30 WITA",
-          thumb: "https://images.unsplash.com/photo-1541625602330-2277a4c46182?w=600&auto=format&fit=crop&q=80",
-          excerpt: "Ratusan pegowes dari berbagai provinsi menaklukkan rute tanjakan ekstrem pusuk Sembalun."
-        }
+        { id: 102, title: "Komunitas Padel Mataram Gelar Fun Match di Lapangan Baru", date: "31 Agustus 2026", time: "13:15 WITA", thumb: "images/gambar_berita/olahraha_image/IMG-20260712-WA0066-696x313.webp", excerpt: "Dua pemain padel beraksi di lapangan biru indoor disaksikan penonton di luar kaca lapangan." },
+        { id: 701, title: "Pejabat Lepas Peserta Jalan Sehat Bersama Warga di Car Free Day", date: "29 Agustus 2026", time: "17:30 WITA", thumb: "images/gambar_berita/olahraha_image/ari-najmul-akhyar-1-696x543.webp", excerpt: "Pejabat berkaus putih dan topi hitam memegang mikrofon melepas peserta jalan sehat dengan latar pepohonan." },
+        { id: 702, title: "Turnamen Mini Soccer Antar Instansi Digelar di GOR Indoor Mataram", date: "28 Agustus 2026", time: "20:00 WITA", thumb: "images/gambar_berita/olahraha_image/IMG-20260906-WA0035-696x464.webp", excerpt: "Belasan pemain berfoto bersama di lapangan karpet hijau indoor usai turnamen persahabatan." },
+        { id: 703, title: "Atlet Muda NTB Jajal Lapangan Padel Baru Jelang Kejuaraan Daerah", date: "27 Agustus 2026", time: "15:20 WITA", thumb: "images/gambar_berita/olahraha_image/IMG-20260923-WA0136-696x402.webp", excerpt: "Seorang atlet memukul bola padel di lapangan biru dengan net dan kaca pembatas yang modern." },
+        { id: 704, title: "Pegiat Olahraga Gelar Uji Coba Lapangan Padel Komunal di Lombok", date: "25 Agustus 2026", time: "07:30 WITA", thumb: "images/gambar_berita/olahraha_image/WhatsApp-Image-2026-08-05-at-07.36.22-696x392.webp", excerpt: "Warga mencoba fasilitas padel baru yang dikelilingi kaca dan jaring dengan antusias." }
       ]
     },
     {
@@ -371,266 +159,85 @@ const SUARA_NTB_DATA = {
       name: "Budaya & Hiburan",
       badgeClass: "badge-umum",
       articles: [
-        {
-          id: 5,
-          title: "Festival Pesona Senggigi Kembali Digelar, Angkat Seni Tradisi Sasak",
-          date: "29 Agustus 2026",
-          time: "19:00 WITA",
-          thumb: "https://images.unsplash.com/photo-1533105079780-92b9be482077?w=800&auto=format&fit=crop&q=80",
-          excerpt: "Ribuan penonton memadati kawasan Pantai Senggigi untuk menyaksikan atraksi Gendang Beleq dan parade busana adat Nusantara."
-        },
-        {
-          id: 801,
-          title: "Film Dokumenter Kearifan Lokal Tambora Masuk Nominasi Festival Film Indonesia",
-          date: "28 Agustus 2026",
-          time: "18:20 WITA",
-          thumb: "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=600&auto=format&fit=crop&q=80",
-          excerpt: "Karya sineas muda Sumbawa ini memotret keharmonisan masyarakat adat dengan alam pegunungan."
-        },
-        {
-          id: 802,
-          title: "Peluncuran Buku Antologi Puisi Penyair NTB Catat Rekor Kunjungan Pesta Literasi",
-          date: "27 Agustus 2026",
-          time: "16:45 WITA",
-          thumb: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=600&auto=format&fit=crop&q=80",
-          excerpt: "Taman Budaya NTB menjadi saksi perjumpaan sastrawan senior dan generasi penulis milenial."
-        },
-        {
-          id: 803,
-          title: "Pementasan Wayang Sasak di Narmada Tampilkan Dalang Cilik Berbakat",
-          date: "26 Agustus 2026",
-          time: "20:30 WITA",
-          thumb: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&auto=format&fit=crop&q=80",
-          excerpt: "Regenerasi kesenian tradisional wayang kulit sasak terus dirawat oleh sanggar seni desa."
-        },
-        {
-          id: 804,
-          title: "Komunitas Sinema Mataram Gelar Nobar dan Diskusi Film Pendek Garapan Lokal",
-          date: "24 Agustus 2026",
-          time: "19:15 WITA",
-          thumb: "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=600&auto=format&fit=crop&q=80",
-          excerpt: "Tiga film indie bertema dinamika sosial kota Mataram mendapat sambutan hangat penonton."
-        }
+        { id: 5, title: "Pameran Seni Rupa Sasak Digelar di Taman Budaya NTB", date: "29 Agustus 2026", time: "19:00 WITA", thumb: "images/gambar_berita/budaya_hiburan_image/WhatsApp-Image-2026-09-21-at-07.03.37-696x407.webp", excerpt: "Karya seni lukis dan instalasi dipamerkan di ruang galeri dengan pencahayaan artistik yang menarik perhatian." },
+        { id: 801, title: "Sineas Muda NTB Rilis Film Pendek Kearifan Lokal Tambora", date: "28 Agustus 2026", time: "18:20 WITA", thumb: "images/gambar_berita/budaya_hiburan_image/film/WhatsApp-Image-2026-06-17-at-19.12.02-696x392.webp", excerpt: "Cuplikan adegan film dengan nuansa alam Tambora ditampilkan sebagai promosi karya sineas lokal." },
+        { id: 802, title: "Peluncuran Buku Antologi Puisi Penyair NTB Meriahkan Pesta Literasi", date: "27 Agustus 2026", time: "16:45 WITA", thumb: "images/gambar_berita/budaya_hiburan_image/buku/BUKU-696x522.webp", excerpt: "Sampul buku puisi dengan desain warna-warni dipajang dalam peluncuran di Taman Budaya." },
+        { id: 803, title: "Adegan Film Lokal Garapan Sutradara NTB Curi Perhatian Penonton", date: "26 Agustus 2026", time: "20:30 WITA", thumb: "images/gambar_berita/budaya_hiburan_image/film/ADEGAN-696x696.webp", excerpt: "Salah satu adegan dramatis film lokal dengan pencahayaan sinematik ditampilkan dalam pemutaran terbatas." },
+        { id: 804, title: "Komunitas Sinema Mataram Gelar Nobar Film Pendek dan Diskusi Kreatif", date: "24 Agustus 2026", time: "19:15 WITA", thumb: "images/gambar_berita/budaya_hiburan_image/film/WhatsApp-Image-2026-08-21-at-19.30.41-696x392.webp", excerpt: "Penonton duduk lesehan menyaksikan pemutaran film pendek di ruang komunitas dengan layar proyektor." }
       ]
     }
   ],
-
-  // Komentar bergambar (5 komentar di berita lainnya dalam bentuk thumbnail)
+  trendingIds: [201, 302, 7, 602, 703],
+  ads: [
+    "images/iklan_info/IKLAN-DLU-HUT-LOMBOK-TIMUR.webp",
+    "images/iklan_info/IKLAN-QUNCI-VILLAS.webp",
+    "images/iklan_info/image 11.png",
+    "images/iklan_info/image 12.png",
+    "images/iklan_info/image 13.png",
+    "images/iklan_info/image 14.png"
+  ],
   comments: [
-    {
-      author: "Hendra Wijaya",
-      articleId: 1,
-      articleTitle: "Gubernur NTB Tinjau Kesiapan Infrastruktur Jalan Menuju Sirkuit Mandalika",
-      thumb: "https://images.unsplash.com/photo-1578874691223-a49262e0c94f?w=300&auto=format&fit=crop&q=80",
-      time: "31 Agustus 2026, 15:10 WITA",
-      text: "Semoga jalan bypass dan penerangan lampu selesai tepat waktu, sangat membantu warga sekitar!"
-    },
-    {
-      author: "Rian Kurniawan",
-      articleId: 102,
-      articleTitle: "Kontingen NTB Targetkan Masuk 10 Besar di Ajang PON 2026 Mendatang",
-      thumb: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=300&auto=format&fit=crop&q=80",
-      time: "31 Agustus 2026, 14:05 WITA",
-      text: "Semangat atlet Bumi Gora! Kami bangga dengan perjuangan cabor atletik dan tinju NTB."
-    },
-    {
-      author: "Nurul Hidayati",
-      articleId: 2,
-      articleTitle: "Polda NTB Ungkap Jaringan Penyelundupan Kayu Ilegal di Sumbawa",
-      thumb: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=300&auto=format&fit=crop&q=80",
-      time: "31 Agustus 2026, 12:40 WITA",
-      text: "Tindak tegas para pelaku illegal logging, hutan NTB harus kita lindungi demi masa depan anak cucu."
-    },
-    {
-      author: "Lalu Suparlan",
-      articleId: 4,
-      articleTitle: "Inovasi SMK di Lombok Timur Ciptakan Motor Listrik Bertenaga Surya",
-      thumb: "https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=300&auto=format&fit=crop&q=80",
-      time: "30 Agustus 2026, 17:15 WITA",
-      text: "Karya anak muda NTB luar biasa. Perlu dukungan modal dari pemda agar bisa diproduksi massal."
-    },
-    {
-      author: "Baiq Anggun",
-      articleId: 5,
-      articleTitle: "Festival Pesona Senggigi Kembali Digelar, Angkat Seni Tradisi Sasak",
-      thumb: "https://images.unsplash.com/photo-1533105079780-92b9be482077?w=300&auto=format&fit=crop&q=80",
-      time: "29 Agustus 2026, 21:00 WITA",
-      text: "Atraksi Gendang Beleq semalam sangat spektakuler, bangga sekali jadi orang Lombok."
-    }
+    { author: "Hendra Wijaya", articleId: 1, articleTitle: "Pejabat NTB Tinjau Cold Storage Tuna Ekspor di Pelabuhan Perikanan", thumb: "images/gambar_berita/ekonimi_image/IMG-20260924-WA0117.webp", time: "31 Agustus 2026, 15:10 WITA", text: "Semoga mutu ekspor tuna NTB makin terjaga dan harga nelayan stabil!" },
+    { author: "Rian Kurniawan", articleId: 102, articleTitle: "Komunitas Padel Mataram Gelar Fun Match di Lapangan Baru", thumb: "images/gambar_berita/olahraha_image/IMG-20260712-WA0066-696x313.webp", time: "31 Agustus 2026, 14:05 WITA", text: "Keren, lapangan padel baru bikin olahraga makin seru di Mataram!" },
+    { author: "Nurul Hidayati", articleId: 103, articleTitle: "BPBD NTB Gelar Koordinasi Malam di Tenda Darurat Penanganan Bencana", thumb: "images/gambar_berita/headline_image/BN_image3.png", time: "31 Agustus 2026, 12:40 WITA", text: "Terima kasih BPBD yang sigap siaga malam hari demi keselamatan warga." },
+    { author: "Lalu Suparlan", articleId: 4, articleTitle: "Taruna Sekolah Kedinasan Ikuti Apel Pembinaan di Pantai Lombok", thumb: "images/gambar_berita/pendidikan_image/IMG-20260918-WA0130-696x522.webp", time: "30 Agustus 2026, 17:15 WITA", text: "Pembinaan karakter di alam terbuka seperti ini sangat membentuk disiplin taruna." },
+    { author: "Baiq Anggun", articleId: 5, articleTitle: "Pameran Seni Rupa Sasak Digelar di Taman Budaya NTB", thumb: "images/gambar_berita/budaya_hiburan_image/WhatsApp-Image-2026-09-21-at-07.03.37-696x407.webp", time: "29 Agustus 2026, 21:00 WITA", text: "Karya seni Sasak makin keren, wajib datang ke pamerannya!" }
   ],
-
-  // Flattened all articles for search & general lookup
   articles: [],
-
   categoryMeta: {
-    "ntb": {
-      name: "NTB",
-      slug: "ntb",
-      badgeClass: "badge-umum",
-      desc: "Warta daerah terkini dari pulau Lombok dan Sumbawa, Provinsi Nusa Tenggara Barat."
-    },
-    "mataram": {
-      name: "Mataram",
-      slug: "mataram",
-      badgeClass: "badge-umum",
-      parent: "NTB",
-      desc: "Kumpulan berita teraktual seputar pembangunan, masyarakat, dan pemerintahan Kota Mataram."
-    },
-    "ekonomi": {
-      name: "Ekonomi",
-      slug: "ekonomi",
-      badgeClass: "badge-ekonomi",
-      desc: "Informasi seputar perkembangan ekonomi daerah, investasi, pasar, pariwisata, dan UMKM di Nusa Tenggara Barat."
-    },
-    "politik": {
-      name: "Politik",
-      slug: "politik",
-      badgeClass: "badge-politik",
-      desc: "Kabar perpolitikan, kebijakan legislatif, eksekutif, dan dinamika pemilu di NTB."
-    },
-    "hukrim": {
-      name: "Hukum dan Kriminal",
-      slug: "hukrim",
-      badgeClass: "badge-hukrim",
-      desc: "Berita seputar penegakan hukum, kasus kriminal, pengadilan, dan ketertiban masyarakat di NTB."
-    },
-    "pendidikan": {
-      name: "Pendidikan",
-      slug: "pendidikan",
-      badgeClass: "badge-pendidikan",
-      desc: "Perkembangan dunia pendidikan sekolah, kampus, beasiswa, dan inovasi generasi muda NTB."
-    },
-    "olahraga": {
-      name: "Olahraga",
-      slug: "olahraga",
-      badgeClass: "badge-olahraga",
-      desc: "Kabar prestasi atlet NTB, PON, sepak bola, atletik, dan perkembangan dunia olahraga daerah."
-    },
-    "budaya": {
-      name: "Budaya & Hiburan",
-      slug: "budaya",
-      badgeClass: "badge-umum",
-      desc: "Liputan seni tradisi, film, buku, festival budaya, dan hiburan di Nusa Tenggara Barat."
-    },
-    "lombok-barat": {
-      name: "Lombok Barat",
-      slug: "lombok-barat",
-      badgeClass: "badge-umum",
-      parent: "NTB",
-      desc: "Kumpulan berita terkini seputar pembangunan, masyarakat, dan pariwisata di Kabupaten Lombok Barat."
-    },
-    "lombok-tengah": {
-      name: "Lombok Tengah",
-      slug: "lombok-tengah",
-      badgeClass: "badge-umum",
-      parent: "NTB",
-      desc: "Informasi teraktual dari Kabupaten Lombok Tengah, kawasan KEK Mandalika dan sekitarnya."
-    },
-    "lombok-timur": {
-      name: "Lombok Timur",
-      slug: "lombok-timur",
-      badgeClass: "badge-umum",
-      parent: "NTB",
-      desc: "Kabar seputar pemerintahan, sosial budaya, dan potensi daerah Kabupaten Lombok Timur."
-    },
-    "lombok-utara": {
-      name: "Lombok Utara",
-      slug: "lombok-utara",
-      badgeClass: "badge-umum",
-      parent: "NTB",
-      desc: "Warta terkini dari Bumi Tioq Tata Tunaq, destinasi Tiga Gili, dan Gunung Rinjani."
-    },
-    "sumbawa-barat": {
-      name: "Sumbawa Barat",
-      slug: "sumbawa-barat",
-      badgeClass: "badge-umum",
-      parent: "NTB",
-      desc: "Berita pembangunan, pertambangan, dan kehidupan masyarakat Kabupaten Sumbawa Barat."
-    },
-    "sumbawa": {
-      name: "Sumbawa",
-      slug: "sumbawa",
-      badgeClass: "badge-umum",
-      parent: "NTB",
-      desc: "Liputan mendalam tentang potensi agro dan dinamika masyarakat Kabupaten Sumbawa."
-    },
-    "dompu": {
-      name: "Dompu",
-      slug: "dompu",
-      badgeClass: "badge-umum",
-      parent: "NTB",
-      desc: "Informasi seputar Kabupaten Dompu, pertanian jagung, Tambora, dan kabar daerah lainnya."
-    },
-    "bima": {
-      name: "Bima",
-      slug: "bima",
-      badgeClass: "badge-umum",
-      parent: "NTB",
-      desc: "Berita terpercaya dari Kota dan Kabupaten Bima, ujung timur Provinsi NTB."
-    },
-    "film": {
-      name: "Film",
-      slug: "film",
-      badgeClass: "badge-umum",
-      parent: "Budaya & Hiburan",
-      desc: "Ulasan film, sinema lokal, sineas NTB, dan perkembangan industri hiburan layar lebar."
-    },
-    "buku": {
-      name: "Buku",
-      slug: "buku",
-      badgeClass: "badge-umum",
-      parent: "Budaya & Hiburan",
-      desc: "Resensi buku, literasi daerah, peluncuran karya sastra, dan penulis Nusa Tenggara Barat."
-    }
+    "ntb": { name: "NTB", slug: "ntb", badgeClass: "badge-umum", desc: "Warta daerah terkini dari pulau Lombok dan Sumbawa, Provinsi Nusa Tenggara Barat." },
+    "mataram": { name: "Mataram", slug: "mataram", badgeClass: "badge-umum", parent: "NTB", desc: "Kumpulan berita teraktual seputar pembangunan, masyarakat, dan pemerintahan Kota Mataram." },
+    "ekonomi": { name: "Ekonomi", slug: "ekonomi", badgeClass: "badge-ekonomi", desc: "Informasi seputar perkembangan ekonomi daerah, investasi, pasar, pariwisata, dan UMKM di Nusa Tenggara Barat." },
+    "politik": { name: "Politik", slug: "politik", badgeClass: "badge-politik", desc: "Kabar perpolitikan, kebijakan legislatif, eksekutif, dan dinamika pemilu di NTB." },
+    "hukrim": { name: "Hukum dan Kriminal", slug: "hukrim", badgeClass: "badge-hukrim", desc: "Berita seputar penegakan hukum, kasus kriminal, pengadilan, dan ketertiban masyarakat di NTB." },
+    "pendidikan": { name: "Pendidikan", slug: "pendidikan", badgeClass: "badge-pendidikan", desc: "Perkembangan dunia pendidikan sekolah, kampus, beasiswa, dan inovasi generasi muda NTB." },
+    "olahraga": { name: "Olahraga", slug: "olahraga", badgeClass: "badge-olahraga", desc: "Kabar prestasi atlet NTB, PON, sepak bola, atletik, dan perkembangan dunia olahraga daerah." },
+    "budaya": { name: "Budaya & Hiburan", slug: "budaya", badgeClass: "badge-umum", desc: "Liputan seni tradisi, film, buku, festival budaya, dan hiburan di Nusa Tenggara Barat." },
+    "lombok-barat": { name: "Lombok Barat", slug: "lombok-barat", badgeClass: "badge-umum", parent: "NTB", desc: "Kumpulan berita terkini seputar pembangunan, masyarakat, dan pariwisata di Kabupaten Lombok Barat." },
+    "lombok-tengah": { name: "Lombok Tengah", slug: "lombok-tengah", badgeClass: "badge-umum", parent: "NTB", desc: "Informasi teraktual dari Kabupaten Lombok Tengah, kawasan KEK Mandalika dan sekitarnya." },
+    "lombok-timur": { name: "Lombok Timur", slug: "lombok-timur", badgeClass: "badge-umum", parent: "NTB", desc: "Kabar seputar pemerintahan, sosial budaya, dan potensi daerah Kabupaten Lombok Timur." },
+    "lombok-utara": { name: "Lombok Utara", slug: "lombok-utara", badgeClass: "badge-umum", parent: "NTB", desc: "Warta terkini dari Bumi Tioq Tata Tunaq, destinasi Tiga Gili, dan Gunung Rinjani." },
+    "sumbawa-barat": { name: "Sumbawa Barat", slug: "sumbawa-barat", badgeClass: "badge-umum", parent: "NTB", desc: "Berita pembangunan, pertambangan, dan kehidupan masyarakat Kabupaten Sumbawa Barat." },
+    "sumbawa": { name: "Sumbawa", slug: "sumbawa", badgeClass: "badge-umum", parent: "NTB", desc: "Liputan mendalam tentang potensi agro dan dinamika masyarakat Kabupaten Sumbawa." },
+    "dompu": { name: "Dompu", slug: "dompu", badgeClass: "badge-umum", parent: "NTB", desc: "Informasi seputar Kabupaten Dompu, pertanian jagung, Tambora, dan kabar daerah lainnya." },
+    "bima": { name: "Bima", slug: "bima", badgeClass: "badge-umum", parent: "NTB", desc: "Berita terpercaya dari Kota dan Kabupaten Bima, ujung timur Provinsi NTB." },
+    "film": { name: "Film", slug: "film", badgeClass: "badge-umum", parent: "Budaya & Hiburan", desc: "Ulasan film, sinema lokal, sineas NTB, dan perkembangan industri hiburan layar lebar." },
+    "buku": { name: "Buku", slug: "buku", badgeClass: "badge-umum", parent: "Budaya & Hiburan", desc: "Resensi buku, literasi daerah, peluncuran karya sastra, dan penulis Nusa Tenggara Barat." }
   }
 };
-
-// Flatten all articles for general lookup and Category helper
 (function() {
   const map = new Map();
   SUARA_NTB_DATA.headlines.forEach(a => map.set(a.id, a));
   SUARA_NTB_DATA.categorySections.forEach(sec => {
     sec.articles.forEach(a => {
       if (!map.has(a.id)) {
-        map.set(a.id, {
-          ...a,
-          category: sec.name,
-          badgeClass: sec.badgeClass,
-          tags: [sec.name, "NTB"],
-          author: "Redaksi SuaraNTB"
-        });
+        map.set(a.id, { ...a, category: sec.name, badgeClass: sec.badgeClass, tags: [sec.name, "NTB"], author: "Redaksi SuaraNTB" });
       }
     });
   });
   SUARA_NTB_DATA.articles = Array.from(map.values());
-
-  // Function to provide 11 articles for any category (1 featured + 5 initial + 5 load more)
   SUARA_NTB_DATA.getCategoryArticles = function(key) {
     const norm = (key || 'ekonomi').toLowerCase();
     const meta = SUARA_NTB_DATA.categoryMeta[norm] || { name: norm.toUpperCase() };
     const name = meta.name;
-
     let matched = SUARA_NTB_DATA.articles.filter(a => {
       return (a.category && a.category.toLowerCase().includes(norm)) ||
              (a.tags && a.tags.some(t => t.toLowerCase().includes(norm))) ||
              (a.title && a.title.toLowerCase().includes(name.toLowerCase()));
     });
-
-    // Ensure we have at least 11 articles so "Tampilkan Lebih Banyak" loads 5 more and then disappears
     const seedThumbs = [
-      "https://images.unsplash.com/photo-1578874691223-a49262e0c94f?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=600&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=600&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=600&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=600&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=600&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1533105079780-92b9be482077?w=600&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=600&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1519331379826-f10be5486c6f?w=600&auto=format&fit=crop&q=80"
+      "images/gambar_berita/ekonimi_image/IMG-20260924-WA0085-696x522.webp",
+      "images/gambar_berita/politik_image/IMG-20260918-WA0157-696x522.webp",
+      "images/gambar_berita/hukrim_image/IMG-20260921-WA0162.webp",
+      "images/gambar_berita/pendidikan_image/Screenshot_20260925-140107-696x304.webp",
+      "images/gambar_berita/olahraha_image/IMG-20260906-WA0035-696x464.webp",
+      "images/gambar_berita/budaya_hiburan_image/WhatsApp-Image-2026-06-22-at-09.18.05-696x522.webp",
+      "images/gambar_berita/ntb_image/mataram/IMG-20260924-WA0102-696x557.webp",
+      "images/gambar_berita/headline_image/BN_image1.png",
+      "images/gambar_berita/ntb_image/bima/WhatsApp-Image-2026-09-21-at-07.03.36-1-696x686.webp",
+      "images/gambar_berita/ntb_image/dompu/WhatsApp-Image-2026-09-25-at-07.03.37-1-696x522.webp",
+      "images/gambar_berita/ekonimi_image/WhatsApp-Image-2026-09-24-at-19.11.41-1-696x392.webp"
     ];
-
     const fallbackTitles = [
       `Perkembangan Terkini Pembangunan Sektor ${name} di Nusa Tenggara Barat`,
       `Pemerintah Daerah Mataram Dorong Penguatan Kolaborasi Bidang ${name}`,
@@ -644,7 +251,6 @@ const SUARA_NTB_DATA = {
       `Inisiatif Komunitas Generasi Muda NTB Berkontribusi Nyata pada ${name}`,
       `Harapan Masa Depan Lebih Baik Melalui Penguatan Sektor ${name} di Bumi Gora`
     ];
-
     while (matched.length < 11) {
       const idx = matched.length;
       matched.push({
@@ -657,7 +263,25 @@ const SUARA_NTB_DATA = {
         category: name
       });
     }
-
     return matched.slice(0, 11);
+  };
+  SUARA_NTB_DATA.getCategoryRealCount = function(key) {
+    const norm = (key || 'ekonomi').toLowerCase();
+    const meta = SUARA_NTB_DATA.categoryMeta[norm] || { name: norm.toUpperCase() };
+    const name = meta.name;
+    return SUARA_NTB_DATA.articles.filter(a => {
+      return (a.category && a.category.toLowerCase().includes(norm)) ||
+             (a.tags && a.tags.some(t => t.toLowerCase().includes(norm))) ||
+             (a.title && a.title.toLowerCase().includes(name.toLowerCase()));
+    }).length;
+  };
+  SUARA_NTB_DATA.getTrendingArticles = function() {
+    const ids = SUARA_NTB_DATA.trendingIds || [];
+    let list = ids.map(id => SUARA_NTB_DATA.articles.find(a => a.id === id)).filter(Boolean);
+    if (list.length < 5) {
+      const remaining = SUARA_NTB_DATA.articles.filter(a => !ids.includes(a.id) && !SUARA_NTB_DATA.headlines.some(h => h.id === a.id));
+      list = list.concat(remaining.slice(0, 5 - list.length));
+    }
+    return list.slice(0, 5);
   };
 })();
