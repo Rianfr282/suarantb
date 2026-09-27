@@ -2353,8 +2353,321 @@ button {
 }
 
 /* ==========================================================================
-   6. Responsive Strategy (Tablet & Desktop)
-   ========================================================================== */
+    4.11 Kartu Info Kontak (Kontak Kami — 2 varian)
+    ========================================================================== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.contact-info-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: 18px 16px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.contact-info-icon {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  border-radius: 10px;
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-info-icon svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+}
+
+.contact-info-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.contact-info-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 6px;
+}
+
+.contact-info-text {
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: var(--color-text);
+  opacity: var(--color-text-opacity-medium);
+}
+
+.contact-info-text a {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.contact-info-text a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+    4.12 Form Kontak
+    ========================================================================== */
+.contact-form-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: 18px 16px;
+}
+
+.contact-form-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 14px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.form-label span {
+  color: #C0392B;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 10px 12px;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-button);
+  font-size: 13px;
+  color: var(--color-text);
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: var(--color-primary);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.btn-contact-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 11px 18px;
+  border-radius: var(--radius-button);
+  align-self: flex-start;
+  transition: opacity 0.15s, transform 0.1s;
+}
+
+.btn-contact-submit:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.form-success-toast {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  background-color: #E8F5E9;
+  color: #2E7D32;
+  border: 1px solid #C8E6C9;
+  padding: 10px 14px;
+  border-radius: var(--radius-button);
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+[data-theme="dark"] .form-success-toast {
+  background-color: rgba(46, 125, 50, 0.15);
+  color: #81C784;
+  border-color: rgba(129, 199, 132, 0.3);
+}
+
+.form-success-toast.is-visible {
+  display: flex;
+}
+
+.form-success-toast svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+    4.13 Halaman Teks Panjang (Redaksi & Pedoman Media Siber)
+    ========================================================================== */
+.long-text-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: 18px 16px;
+}
+
+.long-text-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 6px;
+  line-height: 1.25;
+}
+
+.long-text-subtitle {
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: var(--color-text);
+  opacity: var(--color-text-opacity-medium);
+  margin-bottom: 16px;
+}
+
+.long-text-content {
+  font-size: 13.5px;
+  line-height: 1.75;
+  color: var(--color-text);
+}
+
+.long-text-content p {
+  margin-bottom: 14px;
+}
+
+.long-text-content h2 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 22px 0 10px;
+  padding-left: 10px;
+  border-left: 4px solid var(--color-primary);
+}
+
+.long-text-content h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 18px 0 8px;
+}
+
+.long-text-content ul {
+  margin: 8px 0 14px 20px;
+}
+
+.long-text-content ol {
+  margin: 8px 0 14px 20px;
+}
+
+.long-text-content ol.alpha {
+  list-style-type: lower-alpha;
+}
+
+.long-text-content li {
+  margin-bottom: 6px;
+}
+
+.long-text-content li strong {
+  font-weight: 700;
+}
+
+.long-text-content .text-underline {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.long-text-content a {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.long-text-content a:hover {
+  text-decoration: underline;
+}
+
+.staff-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 10px 0 14px;
+}
+
+.staff-row {
+  display: flex;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.staff-row:last-child {
+  border-bottom: none;
+}
+
+.staff-role {
+  flex: 0 0 42%;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.staff-name {
+  flex: 1;
+  color: var(--color-text);
+  opacity: var(--color-text-opacity-strong);
+}
+
+@media (min-width: 768px) {
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .form-row-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .long-text-card {
+    padding: 24px 22px;
+  }
+}
+
+/* ==========================================================================
+    6. Responsive Strategy (Tablet & Desktop)
+    ========================================================================== */
 
 /* Layout wrapper */
 .main-layout {
