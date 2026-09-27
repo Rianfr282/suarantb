@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initDropdowns();
   initSearchOverlay();
   initAdCarousel();
+  initPopular();
   initArchiveFilter();
   initHeadlineSlider();
 });
@@ -317,36 +318,72 @@ function escapeRegex(str) {
   return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
+function initPopular() {
+  if (!window.SUARA_NTB_DATA || !SUARA_NTB_DATA.getTrendingArticles) return;
+  const trending = SUARA_NTB_DATA.getTrendingArticles();
+  if (!trending.length) return;
+  document.querySelectorAll('.popular-list-unified').forEach(list => {
+    list.innerHTML = trending.map((art, idx) => `
+      <div class="popular-item-unified">
+        <div class="popular-number-large">${idx + 1}</div>
+        <div class="popular-content-unified">
+          <h3 class="popular-title"><a href="isi-berita.html?id=${art.id}">${escapeHTML(art.title)}</a></h3>
+          <div class="card-meta"><span>${escapeHTML(art.date)}</span></div>
+        </div>
+      </div>
+      ${idx < trending.length - 1 ? '<div class="section-item-divider"></div>' : ''}
+    `).join('');
+  });
+}
+
 /* ==========================================================================
-   4. Ad Banner Carousel
+    4. Ad Banner Carousel - gambar iklan_info contain tanpa crop, auto swipe kiri, tap kiri/kanan
    ========================================================================== */
 function initAdCarousel() {
-  const carousels = document.querySelectorAll('.js-ad-carousel');
+  const carousels = document.querySelectorAll('.ad-carousel-section');
   carousels.forEach(carousel => {
+    const frame = carousel.querySelector('.ad-banner-frame');
     const slides = carousel.querySelector('.ad-banner-slides');
     const dots = carousel.querySelectorAll('.ad-dot');
-    if (!slides || dots.length === 0) return;
-
+    if (!frame || !slides) return;
+    const slideCount = slides.children.length;
+    if (slideCount === 0) return;
     let currentIndex = 0;
-    const totalSlides = dots.length;
+    const totalSlides = slideCount;
 
     function goToSlide(index) {
-      currentIndex = index;
+      currentIndex = (index + totalSlides) % totalSlides;
       slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-      dots.forEach((dot, idx) => {
-        dot.classList.toggle('active', idx === currentIndex);
-      });
+      dots.forEach((dot, idx) => dot.classList.toggle('active', idx === currentIndex));
     }
+    function nextSlide() { goToSlide(currentIndex + 1); }
+    function prevSlide() { goToSlide(currentIndex - 1); }
 
     dots.forEach((dot, index) => {
       dot.addEventListener('click', () => goToSlide(index));
     });
 
-    // Autoplay every 5s
-    setInterval(() => {
-      const nextIndex = (currentIndex + 1) % totalSlides;
-      goToSlide(nextIndex);
-    }, 5000);
+    frame.addEventListener('click', (e) => {
+      if (e.target.closest('.ad-dot')) return;
+      const rect = frame.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      if (x < rect.width / 2) prevSlide();
+      else nextSlide();
+    });
+
+    let startX = 0;
+    slides.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+    slides.addEventListener('touchend', e => {
+      const diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 35) {
+        if (diff > 0) nextSlide();
+        else prevSlide();
+      }
+    }, { passive: true });
+
+    let timer = setInterval(nextSlide, 4000);
+    carousel.addEventListener('mouseenter', () => clearInterval(timer));
+    carousel.addEventListener('mouseleave', () => { timer = setInterval(nextSlide, 4000); });
   });
 }
 
